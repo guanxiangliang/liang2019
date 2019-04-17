@@ -1,0 +1,15 @@
+R3650.contig15	1
+R3650.contig3	1
+R3650.contig4	0.955556
+R3650.contig5	1
+R3650.contig6	0.981981
+R3650.contig7	1
+R3650.contig8	1
+R3650.contig9	1
+R3650.contig10	0.998193
+R3650.contig11	0.827273
+R3650.contig12	0.899013
+R3650.contig13	1
+R3650.contig1	0.999681
+R3650.contig14	0.999999
+R3650.contig2	0.998037

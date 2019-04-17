@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+8591	1	8592	1727701

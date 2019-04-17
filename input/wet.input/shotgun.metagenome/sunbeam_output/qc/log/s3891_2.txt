@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+2688	1	2689	5813615

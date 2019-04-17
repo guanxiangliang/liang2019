@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+963442	0	963442	7321

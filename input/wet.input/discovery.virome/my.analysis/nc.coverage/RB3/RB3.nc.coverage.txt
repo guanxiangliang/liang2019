@@ -1,0 +1,15 @@
+RB3.contig11	1
+RB3.contig12	1
+RB3.contig13	1
+RB3.contig1	1
+RB3.contig14	0.994351
+RB3.contig2	1
+RB3.contig15	0.94562
+RB3.contig3	0.999005
+RB3.contig4	1
+RB3.contig5	1
+RB3.contig6	1
+RB3.contig7	0.999999
+RB3.contig8	0.999997
+RB3.contig9	0.999999
+RB3.contig10	1

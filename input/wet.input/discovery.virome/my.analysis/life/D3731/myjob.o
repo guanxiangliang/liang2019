@@ -1,0 +1,40 @@
+Sender: LSF System <lsfadmin@node095.hpc.local>
+Subject: Job 40712659: <sh D3731.sh> in cluster <pennhpc> Done
+
+Job <sh D3731.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <8*node095.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/D3731> was used as the working directory.
+Started at Wed Oct 24 15:02:37 2018
+Results reported on Thu Oct 25 06:45:48 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh D3731.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   445864.22 sec.
+    Max Memory :                                 14484 MB
+    Average Memory :                             13050.40 MB
+    Total Requested Memory :                     61440.00 MB
+    Delta Memory :                               46956.00 MB
+    Max Swap :                                   4 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   56591 sec.
+    Turnaround time :                            56592 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <myjob.err> for stderr output of this job.
+

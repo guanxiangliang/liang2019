@@ -1,0 +1,81 @@
+Sender: LSF System <lsfadmin@node098.hpc.local>
+Subject: Job 40692465: <sh new5.sh> in cluster <pennhpc> Done
+
+Job <sh new5.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <4*node098.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new5> was used as the working directory.
+Started at Fri Oct 19 14:54:37 2018
+Results reported on Mon Oct 22 07:39:34 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new5.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   920667.88 sec.
+    Max Memory :                                 14549 MB
+    Average Memory :                             13266.85 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   4 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   233096 sec.
+    Turnaround time :                            233097 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@node073.hpc.local>
+Subject: Job 40712459: <sh new5.sh> in cluster <pennhpc> Exited
+
+Job <sh new5.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <16*node073.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new5> was used as the working directory.
+Started at Wed Oct 24 13:59:46 2018
+Results reported on Wed Oct 24 14:09:54 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new5.sh
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 130.
+
+Resource usage summary:
+
+    CPU time :                                   9011.73 sec.
+    Max Memory :                                 14352 MB
+    Average Memory :                             12268.86 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   608 sec.
+    Turnaround time :                            608 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+

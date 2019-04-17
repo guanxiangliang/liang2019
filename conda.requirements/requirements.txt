@@ -1,0 +1,17 @@
+seqtk
+blast
+wget
+git
+R
+R-ggplot2
+R-ggbeeswarm
+R-ggsci
+R-dplyr
+R-reshape
+R-viridis
+R-tidyr
+R-gtools
+R-scales
+R-taxonomizr
+R-gridgraphics
+trimmomatic

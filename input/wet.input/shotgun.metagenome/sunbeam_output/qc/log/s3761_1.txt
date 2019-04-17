@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+7544	0	7544	2423728

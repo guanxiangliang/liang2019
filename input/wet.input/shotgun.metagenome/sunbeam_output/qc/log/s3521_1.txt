@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+258	2	260	3872662

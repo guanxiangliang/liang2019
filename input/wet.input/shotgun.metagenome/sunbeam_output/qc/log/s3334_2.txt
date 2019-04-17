@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+55680	1	55681	5730857

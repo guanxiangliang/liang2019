@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+192	0	192	2460444

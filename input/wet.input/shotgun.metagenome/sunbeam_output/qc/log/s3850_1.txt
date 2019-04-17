@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+4106814	1	4106815	137896

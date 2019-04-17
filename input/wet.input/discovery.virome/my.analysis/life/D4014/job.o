@@ -1,0 +1,121 @@
+Sender: LSF System <lsfadmin@node018.hpc.local>
+Subject: Job 40694257: <sh new7.sh> in cluster <pennhpc> Exited
+
+Job <sh new7.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <4*node018.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new7> was used as the working directory.
+Started at Fri Oct 19 15:26:49 2018
+Results reported on Fri Oct 19 15:30:53 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new7.sh
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   778.70 sec.
+    Max Memory :                                 14331 MB
+    Average Memory :                             10159.65 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   239 sec.
+    Turnaround time :                            244 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@node117.hpc.local>
+Subject: Job 40694262: <sh new7.sh> in cluster <pennhpc> Done
+
+Job <sh new7.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <4*node117.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new7> was used as the working directory.
+Started at Fri Oct 19 15:31:18 2018
+Results reported on Sun Oct 21 08:37:51 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new7.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   582478.06 sec.
+    Max Memory :                                 14449 MB
+    Average Memory :                             13177.19 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   4 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   147993 sec.
+    Turnaround time :                            147993 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@node118.hpc.local>
+Subject: Job 40712485: <sh new7.sh> in cluster <pennhpc> Exited
+
+Job <sh new7.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <16*node118.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new7> was used as the working directory.
+Started at Wed Oct 24 14:01:34 2018
+Results reported on Wed Oct 24 14:09:55 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new7.sh
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 130.
+
+Resource usage summary:
+
+    CPU time :                                   7441.62 sec.
+    Max Memory :                                 14295 MB
+    Average Memory :                             12105.45 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   500 sec.
+    Turnaround time :                            502 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+

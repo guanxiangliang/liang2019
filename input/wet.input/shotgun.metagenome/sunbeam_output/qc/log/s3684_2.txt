@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+264	1	265	2206368

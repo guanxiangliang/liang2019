@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+132	0	132	3439619

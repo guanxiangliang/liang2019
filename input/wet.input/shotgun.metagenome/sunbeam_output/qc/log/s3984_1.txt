@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+3269	2	3271	4439814

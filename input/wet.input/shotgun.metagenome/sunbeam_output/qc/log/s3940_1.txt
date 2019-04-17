@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+3824124	0	3824124	502660

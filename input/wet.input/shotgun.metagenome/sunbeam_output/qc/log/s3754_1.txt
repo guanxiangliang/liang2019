@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+1823	5	1828	2730456

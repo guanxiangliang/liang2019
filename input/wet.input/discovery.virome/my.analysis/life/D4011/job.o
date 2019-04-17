@@ -1,0 +1,82 @@
+Sender: LSF System <lsfadmin@node027.hpc.local>
+Subject: Job 40694435: <sh new18.sh> in cluster <pennhpc> Exited
+
+Job <sh new18.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <4*node027.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new18> was used as the working directory.
+Started at Fri Oct 19 16:36:20 2018
+Results reported on Tue Oct 23 10:21:21 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new18.sh
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   1276734.88 sec.
+    Max Memory :                                 14486 MB
+    Average Memory :                             13180.49 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   6 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   323101 sec.
+    Turnaround time :                            323102 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@node012.hpc.local>
+Subject: Job 40712382: <sh new18.sh> in cluster <pennhpc> Exited
+
+Job <sh new18.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <16*node012.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new18> was used as the working directory.
+Started at Wed Oct 24 13:42:44 2018
+Results reported on Wed Oct 24 14:09:54 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new18.sh
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with signal termination: Alarm clock.
+
+Resource usage summary:
+
+    CPU time :                                   24887.20 sec.
+    Max Memory :                                 14370 MB
+    Average Memory :                             12001.66 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   1630 sec.
+    Turnaround time :                            1630 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <job.e> for stderr output of this job.
+

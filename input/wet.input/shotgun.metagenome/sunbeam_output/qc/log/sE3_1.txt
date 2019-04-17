@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+68	0	68	1559

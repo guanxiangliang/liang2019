@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+23802	1	23803	4051955

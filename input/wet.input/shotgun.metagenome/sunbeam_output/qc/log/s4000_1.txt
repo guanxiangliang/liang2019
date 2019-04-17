@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+4039	2	4041	4279480

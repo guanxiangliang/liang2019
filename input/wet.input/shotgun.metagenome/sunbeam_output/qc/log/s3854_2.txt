@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+1548	1	1549	2676066

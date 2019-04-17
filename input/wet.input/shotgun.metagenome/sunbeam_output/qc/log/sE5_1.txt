@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+138	0	138	1613

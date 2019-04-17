@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+853	0	853	2834686

@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+535	1	536	3847912

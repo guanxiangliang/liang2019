@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+354	0	354	11678

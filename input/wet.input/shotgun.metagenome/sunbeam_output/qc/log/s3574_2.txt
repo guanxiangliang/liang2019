@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+380	1	381	3194980

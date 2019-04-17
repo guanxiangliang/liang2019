@@ -1,0 +1,5 @@
+Predictions for D3890.contig100.fa
+Class	probability	standard deviation
+-----	-----------	------------------
+Lytic	0.525314685314685	0.0325643680030037
+Temperate	0.474685314685315	0.0325643680030038

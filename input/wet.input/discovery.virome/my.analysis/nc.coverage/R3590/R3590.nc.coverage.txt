@@ -1,0 +1,5 @@
+R3590.contig3	1
+R3590.contig4	0.999998
+R3590.contig5	0.987561
+R3590.contig6	0.997354
+R3590.contig7	1

@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+532	1	533	4498722

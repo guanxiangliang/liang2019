@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+2673618	0	2673618	209477

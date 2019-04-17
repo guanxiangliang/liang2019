@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+1839	1	1840	5932260

@@ -1,0 +1,40 @@
+Sender: LSF System <lsfadmin@node021.hpc.local>
+Subject: Job 40712675: <sh new7.sh> in cluster <pennhpc> Done
+
+Job <sh new7.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <8*node021.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new7> was used as the working directory.
+Started at Wed Oct 24 15:07:46 2018
+Results reported on Wed Oct 24 21:14:38 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new7.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   173434.80 sec.
+    Max Memory :                                 14418 MB
+    Average Memory :                             13008.45 MB
+    Total Requested Memory :                     61440.00 MB
+    Delta Memory :                               47022.00 MB
+    Max Swap :                                   4 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   22012 sec.
+    Turnaround time :                            22013 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <myjob.err> for stderr output of this job.
+

@@ -1,0 +1,40 @@
+Sender: LSF System <lsfadmin@node126.hpc.local>
+Subject: Job 40712669: <sh new18.sh> in cluster <pennhpc> Done
+
+Job <sh new18.sh> was submitted from host <consign.hpc.local> by user <guanxian> in cluster <pennhpc>.
+Job was executed on host(s) <8*node126.hpc.local>, in queue <normal>, as user <guanxian> in cluster <pennhpc>.
+</home/guanxian> was used as the home directory.
+</home/guanxian/new/new18> was used as the working directory.
+Started at Wed Oct 24 15:06:44 2018
+Results reported on Thu Oct 25 09:24:07 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh new18.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   519245.16 sec.
+    Max Memory :                                 14505 MB
+    Average Memory :                             13099.76 MB
+    Total Requested Memory :                     61440.00 MB
+    Delta Memory :                               46935.00 MB
+    Max Swap :                                   4 MB
+    Max Processes :                              305
+    Max Threads :                                306
+    Run time :                                   65842 sec.
+    Turnaround time :                            65843 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <myjob.err> for stderr output of this job.
+

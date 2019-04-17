@@ -1,0 +1,2 @@
+human_GRch38	phix174	host	nonhost
+25429	0	25429	2235681
