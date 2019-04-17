@@ -4,5 +4,5 @@ rm *.pdf
 
 git init
 git add .
-git commit -m "New updates"
+git commit -m "update"
 git push -u origin master
