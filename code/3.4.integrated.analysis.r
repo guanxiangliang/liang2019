@@ -18,7 +18,7 @@ library(gtools) # mixedsort
 library(scales) # for trans_form in ggplot
 library(grid)
 library(RColorBrewer) # brew.col
-#library(taxonomizr)### convert accession id to tax id and to names ###
+library(taxonomizr)### convert accession id to tax id and to names ###
 # getNamesAndNodes()
 # getAccession2taxid()
 # getAccession2taxid(types='prot')
