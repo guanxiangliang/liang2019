@@ -33,6 +33,9 @@ bash ${code}/1.2.2.uniprot.data.sh
 #Parvovirirdae (n = 60): https://www.ncbi.nlm.nih.gov/nuccore?term=Parvovirinae[Organism]+NOT+cellular+organisms[ORGN]+NOT+wgs[PROP]+NOT+AC_000001:AC_999999[pacc]+NOT+gbdiv+syn[prop]+AND+(srcdb_refseq[PROP]+OR+nuccore+genome+samespecies[Filter])+AND+(%22vhost+human%22[Filter])
 #Caliciviridae (n = 1409): https://www.ncbi.nlm.nih.gov/nuccore?term=Caliciviridae[Organism]+NOT+cellular+organisms[ORGN]+NOT+wgs[PROP]+NOT+AC_000001:AC_999999[pacc]+NOT+gbdiv+syn[prop]+AND+(srcdb_refseq[PROP]+OR+nuccore+genome+samespecies[Filter])+AND+(%22vhost+human%22[Filter])
 #Picornaviridae (n = 3728): https://www.ncbi.nlm.nih.gov/nuccore?term=Picornaviridae[Organism]+NOT+cellular+organisms[ORGN]+NOT+wgs[PROP]+NOT+AC_000001:AC_999999[pacc]+NOT+gbdiv+syn[prop]+AND+(srcdb_refseq[PROP]+OR+nuccore+genome+samespecies[Filter])+AND+(%22vhost+human%22[Filter])
+#Astroviridae[Organism] NOT cellular organisms[ORGN] NOT wgs[PROP] NOT AC_000001:AC_999999[pacc] NOT gbdiv syn[prop] AND (srcdb_refseq[PROP] OR nuccore genome samespecies[Filter]) 
+
+
 
 ## 1.2.4 Host genomes used for Sunbeam pipeline.
 # dowload the lastest asembly from RefSeq
