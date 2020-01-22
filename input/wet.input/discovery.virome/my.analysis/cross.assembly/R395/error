@@ -1,0 +1,379 @@
+Warning: Empty fasta file: 'R395.contig.fa'
+Warning: All fasta inputs were empty
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /home/guanxian/miniconda3/bin/bowtie2-build-s --wrapper basic-0 R395.contig.fa R395.contig 
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory
+(ERR): "R395.contig" does not exist or is not a Bowtie 2 index
+Exiting now ...
+[E::hts_open_format] Failed to open file good.sam
+samtools view: failed to open "good.sam" for reading: No such file or directory
+rm: cannot remove ‘good.sam’: No such file or directory

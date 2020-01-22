@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+4450180	6	4450186	742933

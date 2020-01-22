@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+652500	1	652501	4558137

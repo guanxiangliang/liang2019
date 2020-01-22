@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+60354	0	60354	2582850

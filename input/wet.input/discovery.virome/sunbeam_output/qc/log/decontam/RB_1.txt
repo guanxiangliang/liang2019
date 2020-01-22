@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+119137	0	119137	359932

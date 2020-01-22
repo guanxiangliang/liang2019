@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+6155265	2	6155267	1162371

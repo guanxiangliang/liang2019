@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+238	0	238	5875006

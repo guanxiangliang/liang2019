@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+4640259	1	4640260	631191

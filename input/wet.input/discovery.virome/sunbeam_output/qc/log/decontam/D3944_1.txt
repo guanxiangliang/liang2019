@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+96101	0	96101	5290718

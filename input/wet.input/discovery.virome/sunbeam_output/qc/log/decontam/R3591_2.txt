@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+6853	0	6853	1473577

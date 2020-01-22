@@ -1,0 +1,21 @@
+group	Adenovirus	Anellovirus	Astrovirus	Calicivirus	Enterovirus	Parvovirus	Total	size	technique	cohort	Value
+Formula	0.142857143	0	0	0.142857143	0	0	0.285714286	1	qPCR	Urban US 1	Ratio
+Breastmilk	0	0	0	0	0	0	0	1	qPCR	Urban US 1	Ratio
+Formula	0.195652174	0.02173913	0	0.108695652	0.02173913	0	0.326086957	1	qPCR	Urban US 2	Ratio
+Breastmilk	0.025316456	0.012658228	0	0.025316456	0	0	0.063291139	1	qPCR	Urban US 2	Ratio
+Formula	0.233333333	0	0	0.2	0.3	0	0.533333333	1	qPCR	Africa	Ratio
+Breastmilk	0.014285714	0	0	0.042857143	0.214285714	0	0.257142857	1	qPCR	Africa	Ratio
+Formula	0.142857143	0	0	0.142857143	0.142857143	0	0.428571429	1	Seq	Urban US 1	Ratio
+Breastmilk	0	0	0	0	0	0	0	1	Seq	Urban US 1	Ratio
+Formula	0.065217391	0.130434783	0	0.108695652	0.086956522	0.043478261	0.30434783	1	Seq	Urban US 2	Ratio
+Breastmilk	0.012658228	0.037974684	0.025316456	0.025316456	0	0.012658228	0.08860759	1	Seq	Urban US 2	Ratio
+Formula	0.428	0	0	0.428	0	0	0.581	1	qPCR	Urban US 1	CI
+Breastmilk	0	0	0	0	0	0	0	1	qPCR	Urban US 1	CI
+Formula	0.339	0.115	0	0.236	0.115	0	0.48	1	qPCR	Urban US 2	CI
+Breastmilk	0.088	0.069	0	0.088	0	0	0.142	1	qPCR	Urban US 2	CI
+Formula	0.423	0	0	0.386	0.494	0	0.717	1	qPCR	Africa	CI
+Breastmilk	0.077	0	0	0.12	0.329	0	0.376	1	qPCR	Africa	CI
+Formula	0.428	0	0	0.428	0.428	0	0.711	1	Seq	Urban US 1	CI
+Breastmilk	0	0	0	0	0	0	0	1	Seq	Urban US 1	CI
+Formula	0.179	0.263	0	0.236	0.208	0.148	0.458	1	Seq	Urban US 2	CI
+Breastmilk	0.069	0.107	0.088	0.088	0	0.069	0.174	1	Seq	Urban US 2	CI

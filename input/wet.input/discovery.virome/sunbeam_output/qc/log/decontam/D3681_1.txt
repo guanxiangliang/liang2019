@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+134	0	134	5252572

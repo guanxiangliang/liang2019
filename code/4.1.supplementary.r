@@ -8,29 +8,15 @@ options(warn=0)
 #### Libraries ####
 library(ggplot2)
 library(dplyr)
-library(plyr) #rbind.fill function
+library(vegan)
+# library(plyr) #rbind.fill function
 library(reshape)
 library(ggsci)
-library(viridis)
-library(viridisLite)
-library(viridis)
 library(tidyr) # separate function
-library(gtools) # mixedsort
-library(scales) # for trans_form in ggplot
-library(grid)
-library(RColorBrewer) # brew.col
-library(taxonomizr)### convert accession id to tax id and to names ###
-# getNamesAndNodes()
-# getAccession2taxid()
-# getAccession2taxid(types='prot')
-# read.names.sql('names.dmp','./input/database/ac2tax/accessionTaxa.sql')
-# read.nodes.sql('nodes.dmp','./input/database/ac2tax/accessionTaxa.sql')
-# read.accession2taxid(list.files('.','accession2taxid.gz$'),'./input/database/ac2tax/accessionTaxa.sql')
-# file.remove(list.files('.','accession2taxid.gz$'))
-# file.remove(list.files('.','dmp$'))
-# #### End ####
+#### End ####
 
 #### color set up using ggsci ####
+guan.color<-alpha(c("#7493cb","#f89a1d","#73cedf","#99991EFF","#BFA8CC","#60BC34","#FAD3D3","#E62187","#15B2EA","#269C79","#FFB246"),1)
 # all colror
 color=pal_ucscgb(alpha = 1)(20)
 # Age group color(three colors)# add 7 for older 
@@ -44,159 +30,223 @@ color.tron=pal_tron(alpha = 1)(7)
 #color nature used with the data
 #### End ####
 
-#### Fig. S3 Lytic phage prediction ####
-source("./code/dark.R")
-# 
-# # make viral.contig.annotation and write out contig's D3400.contig.ann
-names<-list.files(paste(data.pa,"/discovery.virome/my.analysis/contigs/",sep=""), pattern="^D")
-for (i in names){
-  tryCatch({
-    tmp<-dark(i)
-    assign(paste0(i,".contig.ann"),tmp) #paste0 can be used for objective with variables
-    #     write.table(tmp[,"contig"],paste("rtable/",i,".viral.contig.txt",sep=""),quote = FALSE,row.names = F,  col.names = FALSE )
-  }, error=function(e){})
-}
-# 
-# ## move to shell to extract orf fasta and predict lifestyle
-# #cat D3400.viral.contig.txt | while read p; do awk "/^>/{x = /${p}_/;}(x)" /media/lorax/users/guanxiang/1_igram/1_igram_virome_hiseq/analysis/1_vlp_analysis/my.analysis/orfs/D3400/D3400.contig.3k.orf.fa > ${p}.fa; perl ~/software/PHACTS/phacts.pl -f ${p}.fa --classes ~/software/PHACTS/classes_lifestyle -r 100 > ${p}.lifestyle; remove ${p}.fa;done
+#### extended fig.1a-e Total microbial DNA shotgun data ####
+meta <- read.delim(paste(meta.pa,"meta.data.txt",sep=""))
+# This is from kraken and QC combination processed in Mac
+tmp<-read.delim("input/wet.input/shotgun.metagenome/shotgun.hiseq.reads.information.txt")
+tmp[is.na(tmp)]<-0
+tmp<-cbind(as.data.frame(tmp[-6,1]),prop.table(data.matrix(tmp[-6,-1]), 2))
+shot.reads<-tmp
 
+data<-melt(shot.reads)
+names(data)<-c("Source","library_id","Percentage")
+# merge with prop data come from # total shot gun human reads vs 16s
+data<-merge(data,meta,by="library_id")
+data<-arrange(data,Source,Percentage) # sort by Source then by Percentage
+data$library_id<-factor(data$library_id,levels=unique(data[data$Source=="Bacteria",]$library_id),ordered = T) # change sample id order by bacteria percentage
+data$Source<-factor(data$Source,levels=c("Bacteria","Archaea","Viruses","Human","Unassigned"))
 
-samples<-list.files(paste(data.pa,"discovery.virome/my.analysis/life",sep=""))
-for (j in samples) {
-  tryCatch({
-    names<-list.files(paste(data.pa,"discovery.virome/my.analysis/life/",j,"/",sep=""),pattern=paste("*style"))
-    l<-c()
-    for (i in names){
-      tryCatch({
-        contig.id<-paste(unlist(strsplit(i, "\\."))[1],unlist(strsplit(i, "\\."))[2],sep=".")
-        tmp<-read.delim(paste(data.pa,"discovery.virome/my.analysis/life/",j,"/",i,sep=""),skip=3,header=F)[,c("V1","V2")]
-        tmp<-as.data.frame(t(tmp))
-        names(tmp)<-as.vector(t(tmp[1,]))
-        
-        rownames(tmp)<-c("style",contig.id)  
-        tmp<-tmp[-1,]
-        l[[contig.id]]<-tmp
-      }, error=function(e){})
-    }
-    tmp1<-do.call("rbind", l)
-    tmp1$contig<-rownames(tmp1)
-    tmp2<-get(paste(j,".contig.ann",sep=""))
-    tmp<-merge(tmp2,tmp1,by="contig")
-    assign(paste0(j,".contig.ann.life"),tmp)
-  }, error=function(e){})
-}
-
-
-samples<-list.files(paste(data.pa,"discovery.virome/my.analysis/life",sep=""),pattern = "0$") # $ means 0 is the end of the string
-l<-c()
-for (i in samples){ 
-  tryCatch({
-  tmp<-get(paste(i,".contig.ann.life",sep="")) %>% filter(source=="Viruses",uniprot.total.orf.number>=10) 
-    tmp$Temperate<-as.numeric(as.character(tmp$Temperate))
-  tmp$Lytic<-as.numeric(as.character(tmp$Lytic))
-  tmp<-mutate(tmp,
-              life=Temperate-0.5)
-  tmp<-cbind(tmp,data.frame(group=rep("Month 0",nrow(tmp))))
-  l[[i]]<-tmp[,c("contig","contig.length","life","group","vlp.reads.number")]
-  }, error=function(e){})
-}
-tmp1<-do.call("rbind", l)
-
-
-samples<-list.files(paste(data.pa,"discovery.virome/my.analysis/life",sep=""),pattern = "1$")
-l<-c()
-for (i in samples){ 
-  tmp<-get(paste(i,".contig.ann.life",sep="")) %>% filter(source=="Viruses",uniprot.total.orf.number>=10) 
-  tmp$Temperate<-as.numeric(as.character(tmp$Temperate))
-  tmp$Lytic<-as.numeric(as.character(tmp$Lytic))
-  tmp<-mutate(tmp,
-              life=Temperate-0.5)
-  tmp<-cbind(tmp,data.frame(group=rep("Month 1",nrow(tmp))))
-  l[[i]]<-tmp[,c("contig","contig.length","life","group","vlp.reads.number")]
-}
-tmp2<-do.call("rbind", l)
-
-
-samples<-list.files(paste(data.pa,"discovery.virome/my.analysis/life",sep=""),pattern = "4$")
-l<-c()
-for (i in samples){ 
-  tmp<-get(paste(i,".contig.ann.life",sep="")) %>% filter(source=="Viruses",uniprot.total.orf.number>=10)  
-  tmp$Temperate<-as.numeric(as.character(tmp$Temperate))
-  tmp$Lytic<-as.numeric(as.character(tmp$Lytic))
-  tmp<-mutate(tmp,
-              life=Temperate-0.5)
-  tmp<-cbind(tmp,data.frame(group=rep("Month 4",nrow(tmp))))
-  l[[i]]<-tmp[,c("contig","contig.length","life","group","vlp.reads.number")]
-}
-tmp3<-do.call("rbind", l)
-tmp<-rbind(tmp1,tmp2,tmp3)
-r1<-round(sum(tmp[tmp$group=="Month 0"&tmp$life<=0,"vlp.reads.number"])/sum(tmp[tmp$group=="Month 0","vlp.reads.number"]),digits = 3)
-r2<-round(sum(tmp[tmp$group=="Month 1"&tmp$life<=0,"vlp.reads.number"])/sum(tmp[tmp$group=="Month 1","vlp.reads.number"]),digits = 3)
-r3<-round(sum(tmp[tmp$group=="Month 4"&tmp$life<=0,"vlp.reads.number"])/sum(tmp[tmp$group=="Month 4","vlp.reads.number"]),digits = 3)
-
-
-
-
-l<-c()
-for (i in 1:nrow(tmp))
-{
-  tmp1=data.frame(reads.count=rep(1,round(tmp[i,5]/min(tmp[,5]))),contig=rep(tmp[i,1],round(tmp[i,5]/min(tmp[,5]))),contig.length=rep(tmp[i,2],round(tmp[i,5]/min(tmp[,5]))),life=rep(tmp[i,3],round(tmp[i,5]/min(tmp[,5]))),group=rep(tmp[i,4],round(tmp[i,5]/min(tmp[,5]))))
-  l[[i]]<-tmp1
-}
-#tmp2<-do.call("rbind", l) # too slow
-tmp2<-rbind.fill(l)# faster
-tmp2<-separate(tmp2,col = contig,sep = "\\.",into = "contig")
-tmp2<-mutate(tmp2,subject=substr(contig,2,4)) # substring a whole column
-
-
-pdf("output/Fig.S3.pdf",width=10,height=10)
-ggplot(tmp2, aes(x=life,fill=group)) +
-  geom_density()+
-
-  scale_fill_manual(values = age.col)+
-  coord_cartesian(xlim = c(-0.14, 0.14)) +
-   labs(x="",y="Reads density")+
-  geom_vline(xintercept = 0)+
-  scale_x_continuous(breaks=c(-0.14,-0.07,0,0.07,0.14),
-                     labels=c("1","0.75","0.5","0.75","1"))+ # scale the probability 
-  facet_grid(group ~ .)+
+#data<-merge(data,prop.com[prop.com$library=="DNA",],by.x="sample_id",by.y="sample_id")
+# (1) contig proportion
+g<-ggplot(data[!data$Study_group=="Negative Control",],aes(y = Percentage*100, x = interaction(library_id,Study_group), fill = Source))+
+  geom_bar(stat="identity")+
+  scale_fill_manual(values=color[1:6])+
+  labs(x ="",y="")+
+  facet_wrap(~Study_group,scales ="free_x",nrow = 1 )+
   theme_classic()+
   theme(
-    axis.title = element_text(size=20,colour="black"),
-    axis.text = element_text(size=15,colour="black"),
+    axis.text.x = element_blank(),
+    axis.text.y = element_text(size=15,colour="black"),
+    axis.ticks.x = element_blank(),
+    legend.title=element_blank(),
+    legend.text = element_text(size=15,colour="black"),
     strip.background = element_blank(),
-    strip.text=element_blank(),
-    legend.position="none"
+    strip.text = element_text(size=20,colour="black") 
   )
 
-grid.text(percent(r1), x = unit(0.45, "npc"), y = unit(0.90, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text(percent(1-r1), x = unit(0.62, "npc"), y = unit(0.90, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text(percent(r2), x = unit(0.45, "npc"), y = unit(0.60, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text(percent(1-r2), x = unit(0.62, "npc"), y = unit(0.60, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text(percent(r3), x = unit(0.45, "npc"), y = unit(0.3, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text(percent(1-r3), x = unit(0.62, "npc"), y = unit(0.3, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text("Month 0", x = unit(0.18, "npc"), y = unit(0.95, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text("Month 1", x = unit(0.18, "npc"), y = unit(0.65, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text("Month 4", x = unit(0.18, "npc"), y = unit(0.35, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text("Lytic", x = unit(0.1, "npc"), y = unit(0.02, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text("Temperate", x = unit(0.92, "npc"), y = unit(0.02, "npc"),gp=gpar(fontsize=20, col="black"))
-grid.text("Probability", x = unit(0.53, "npc"), y = unit(0.02, "npc"),gp=gpar(fontsize=20, col="black"))
+pdf("output/extended.fig1a.pdf", width = 6, height = 3.5)
+g
+dev.off()
 
 
-grid.lines(x = unit(c(0.25, 0.45), "npc"),
-           y = unit(c(0.02, 0.02), "npc"),
-           gp = gpar(fill="black"),
-           arrow = arrow(length = unit(0.2, "inches"), angle = 5,
-                         ends="first", type="closed"))
-grid.lines(x = unit(c(0.6, 0.8), "npc"),
-           y = unit(c(0.02, 0.02), "npc"),
-           gp = gpar(fill="black"),
-           arrow = arrow(length = unit(0.2, "inches"), angle = 5,
-                         ends="last", type="closed"))
+kraken <- read.delim("input/wet.input/shotgun.metagenome/sunbeam_output/classify/all_samples.tsv", skip = 1)
+names(kraken) <- gsub(x = names(kraken),
+                      pattern = "\\.taxa",
+                      replacement = "\\")
+names(kraken)[1]<-"tax_id" ## kraken is table with 1 is tax id, 2:157 are libraries, 158 is names
+kraken.shot<-separate(data = kraken, col = Consensus.Lineage, 
+                      into = c("kingdom","phyla","class",
+                               "order","family","genus","species"),
+                      sep = "\\;")
+kraken.shot$kingdom <- gsub(x = kraken.shot$kingdom,
+                            pattern = "\\k__",
+                            replacement = "\\")
+kraken.shot$phyla <- gsub(x = kraken.shot$phyla,
+                          pattern = "\\ p__",
+                          replacement = "\\")
+kraken.shot$class <- gsub(x = kraken.shot$class,
+                          pattern = "\\ c__",
+                          replacement = "\\")
+kraken.shot$order <- gsub(x = kraken.shot$order,
+                          pattern = "\\ o__",
+                          replacement = "\\")
+kraken.shot$family <- gsub(x = kraken.shot$family,
+                           pattern = "\\ f__",
+                           replacement = "\\")
+kraken.shot$genus <- gsub(x = kraken.shot$genus,
+                          pattern = "\\ g__",
+                          replacement = "\\")
+kraken.shot$species <- gsub(x = kraken.shot$species,
+                            pattern = "\\ s__",
+                            replacement = "\\")
+kraken.shot<-kraken.shot[,c(-1,-(76:80))]
+kraken.shot<-kraken.shot%>%gather(key=library_id,value=read,-kingdom,-phyla)%>%
+  dplyr::mutate(phyla=ifelse(phyla=="Bacteroidetes"|phyla=="Actinobacteria"|phyla=="Firmicutes"|phyla=="Proteobacteria",phyla,"Others"))
+
+sdata<-left_join(kraken.shot,meta)
+sdata$library_id<-factor(sdata$library_id,levels=unique(data[data$Source=="Bacteria",]$library_id),ordered = T)
+
+g<-ggplot(sdata%>%filter(Study_group!="Negative Control"),aes(y =read, x = interaction(library_id,Study_group),fill=phyla))+
+  geom_bar(stat="identity")+
+  labs(x ="",y="")+
+  scale_y_continuous(breaks=c(3e6),labels = c("3M"))+
+  labs(title = "")+
+  theme_classic()+
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_text(size=15,colour="black"),
+    axis.ticks.x = element_blank(),
+    legend.title=element_blank(),
+    legend.text = element_text(size=15,colour="black"),
+    strip.background = element_blank(),
+    strip.text = element_text(size=20,colour="black"))+
+  facet_wrap(~Study_group,scales ="free_x",nrow=1 )
+pdf("output/extended.fig1c.pdf", width = 6, height = 3.5)
+g
+dev.off()
+
+
+path<-"input/wet.input/discovery.virome/sunbeam_output/qc/log/decontam/"
+name<-list.files(path,pattern = "_1")
+l=c()
+i=1
+for (x in name) {
+  y<-read.delim(paste(path,x,sep=""))
+  y<-y%>%mutate(human.ratio=human38/(nonhost+host))
+  y$human38<-strsplit(strsplit(x,"\\/")[[1]][length(strsplit(x,"\\/")[[1]])],"\\_")[[1]][1]
+  l[[i]]<-y[,c(1,5)]
+  i=i+1
+}
+data<-do.call(rbind,l)
+mdata<-merge(data,meta[meta$library_type=="DNA"&meta$Study_group=="Month 0",],by.x="human38",by.y="library_id")
+g<-ggplot(mdata,aes(x=Stool_hours_to_collection,y=human.ratio*100))+
+  geom_point(colour="black",size=3,alpha=0.8)+
+  geom_smooth(method='lm',formula=y~x,colour="black",linetype = "dashed")+
+  annotate("text", x=102, y=95,size=10, label= expression(paste(italic(P)," = 0.04")))+
+  annotate("text", x=112, y=85,size=10, label= expression(paste(italic(R)," = -0.45")),hjust = 0.63)+
+  scale_x_continuous(trans='log2', expand = c(0.05,0))+
+  labs(y="Human DNA\npercentage (%)",x="Hours to collection")+
+  theme_classic()+
+  theme( 
+    axis.title = element_text(size=35,colour="black"),
+    axis.text = element_text(size=30,colour = "black"),
+    axis.title.y=element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))
+  )
+pdf("output/extended.fig1b.pdf",width=10,height=7) 
+g
+dev.off()
+
+cor.test(mdata$Stool_hours_to_collection,mdata$human.ratio,method = "spearman")
+
+
+path <- "input/wet.input/shotgun.metagenome/subset.analysis/sunbeam_output/qc/decontam"
+name<-list.files(path=path,pattern = ".metaphlan",full.names = T)
+
+read_metaphlan<-function(x){
+  y<-read.delim(x)
+  return(y)
+}
+l<-lapply(name,read_metaphlan)
+metaphlan.data<-Reduce(function(x, y) merge(x, y, all=TRUE), l)
+metaphlan.data[is.na(metaphlan.data)]<-0
+
+
+
+tmp<-metaphlan.data%>%gather(key=library_id,value=read,-species)%>%
+  spread(key=species,value=read)
+
+tmp<-as.data.frame(tmp)
+
+rownames(tmp)<-tmp[,1]
+tmp<-tmp[,-1]
+
+
+#decontam function
+#tmp1<-shot.meta[,1:4]
+#tmp1$sample_id<-factor(tmp1$sample_id,levels=rownames(tmp),ordered = T)
+#tmp1<-tmp1[order(tmp1$sample_id),]
+#tmp1<-tmp1$final_dna_concentration_ng_ul
+#tmp1<-ifelse(tmp1==0,0.00001,tmp1)
+# 
+tmp1<-meta%>%filter(Experiment=="Shotgun")%>%select(library_id,Study_group)
+tmp1$library_id<-factor(tmp1$library_id,levels=rownames(tmp),ordered = T)
+tmp1<-tmp1[order(tmp1$library_id),]
+
+tmp1$is.neg<-tmp1$Study_group=="Negative Control"
+tmp1<-tmp1$is.neg
+library(phyloseq)
+library(decontam)
+#contam.freq <- isContaminant(as.matrix(tmp), method="frequency", threshold=0.5, conc=tmp1,normalize=FALSE)
+contam.pre <- isContaminant(as.matrix(tmp), method="prevalence", threshold=0.5, neg=tmp1,normalize=FALSE)
+contam.pre$id<-names(tmp)
+
+tmp<-tmp%>%dplyr::select((contam.pre%>%filter(contaminant=="FALSE"))$id)
+data<-tmp
+
+sha<-data.frame(diversity(data,index = "shannon"))
+names(sha)<-"shannon"
+sha$library_id<-rownames(sha)
+tmp<-left_join(sha,meta%>%dplyr::select(Study_group,library_id))
+tmp<-tmp%>%mutate(age=ifelse(Study_group=="Month 0",0,ifelse(Study_group=="Month 1",1,4)))
+g<-ggplot(tmp%>%filter(Study_group!="Negative Control"),aes(x=Study_group,y=shannon,fill=Study_group))+
+  geom_boxplot()+
+  scale_fill_manual(values = guan.color[1:3])+
+  xlab("")+
+  ylab("Bacterial shannon diversity")+
+  annotate("text", x=c(1.5,2.5,2), y=c(2,2,2.3),size=5, label= c(expression(paste(italic(P)," = 0.0003")),expression(paste(italic(P)," = 0.39")),expression(paste(italic(P)," = 0.0002"))))+
+  annotate("segment", x = c(1.05,2.05,1.05), xend = c(1.95,2.95,2.95), y = c(1.9,1.9,2.2), yend = c(1.9,1.9,2.2))+
+  
+  theme_classic()+
+  theme(legend.position = "none",
+        axis.title = element_text(size=20,color="black"),
+        axis.text = element_text(size=15,color="black"))
+pdf("output/extended.fig1e.pdf",width = 5,height = 5)
+g
+dev.off()
+
+
+rich<-data.frame(rowSums(data>0))
+names(rich)<-"richness"
+rich$library_id<-rownames(rich)
+tmp<-left_join(rich,meta%>%dplyr::select(Study_group,library_id))
+tmp<-tmp%>%mutate(age=ifelse(Study_group=="Month 0",0,ifelse(Study_group=="Month 1",1,4)))
+g<-ggplot(tmp%>%filter(Study_group!="Negative Control"),aes(x=Study_group,y=richness,fill=Study_group))+
+  geom_boxplot()+
+  scale_fill_manual(values = guan.color[1:3])+
+  xlab("")+
+  ylab("Bacterial richness")+
+  annotate("text", x=c(1.5,2.5,2), y=c(9,9,9.5),size=5, label= c(expression(paste(italic(P)," = 0.0001")),expression(paste(italic(P)," = 0.59")),expression(paste(italic(P)," = 0.0002"))))+
+  annotate("segment", x = c(1.05,2.05,1.05), xend = c(1.95,2.95,2.95), y = c(8.8,8.8,9.3), yend = c(8.8,8.8,9.3))+
+  theme_classic()+
+  theme(legend.position = "none",
+        axis.title = element_text(size=20,color="black"),
+        axis.text = element_text(size=15,color="black"))
+pdf("output/extended.fig1d.pdf",width = 5,height = 5)
+g
 dev.off()
 #### End ####
 
-#### Fig. S2 Herv reads####
+#### extended fig.4 Herv reads####
 #### Data of Herv, Sine, and Line reads ratio for Human 
 meta <- read.delim(paste(meta.pa,"meta.data.txt",sep=""))
 tmp1<-read.delim(paste(database.pa,"/hg38/sine.id",sep=""),header=F)
@@ -247,169 +297,24 @@ repeatp<-mutate(repeatp,
 repeatp<-merge(repeatp,meta,by="library_id")
 
 
-### Human herv
-#tmp<-repeatp[(!repeatp$group2=="Control")&(repeatp$library=="DNA"),c("group","hervp")]
-#tmp<-repeatp[repeatp$library=="DNA",c("group","hervp")] # this for include negative control
-tmp<-(repeatp %>% filter(study_group=="Month 0"|study_group=="Month 1"|study_group=="Month 4"|study_group=="Negative Control",library_type=="DNA"))[,c("study_group","hervp")]
-tmp1<-aggregate(. ~ study_group,tmp, median)
-#tmp2<-aggregate(. ~ group,tmp, sd)
-tmp2<-aggregate(. ~ study_group,tmp, function(x) {sd(x)/sqrt(length(x))}) # this is for standard erro
-tmp<-cbind(tmp1,tmp2[,2])
-names(tmp)<-c("Age","mean","se")
-tmp$library<-"DNA"
+library(ggpubr)
 
-tmp3<-(repeatp %>% filter(study_group=="Month 0"|study_group=="Month 1"|study_group=="Month 4"|study_group=="Negative Control",library_type=="RNA"))[,c("study_group","hervp")]
-#tmp3<-repeatp[repeatp$library=="RNA",c("group","hervp")] # this is for include negative control
-tmp1<-aggregate(. ~ study_group,tmp3, median)
-#tmp2<-aggregate(. ~ group,tmp, sd)
-tmp2<-aggregate(. ~ study_group,tmp3, function(x) {sd(x)/sqrt(length(x))}) # this is for standard erro
-tmp3<-cbind(tmp1,tmp2[,2])
-names(tmp3)<-c("Age","mean","se")
-tmp3$library<-"RNA"
-tmp<-rbind(tmp,tmp3)
-ggplot(tmp,aes(Age,100*mean,width=0.5,fill=library))+
-  geom_bar(stat="identity", color="black",size=1,position=position_dodge())+
-  geom_errorbar(aes(ymin=mean*100, ymax=(mean+se)*100), width=0.25,size=1,
-                position=position_dodge(0.5)) +
-  scale_y_continuous(expand = c(0, 0)) +
-  #scale_x_discrete(breaks=c("Month 0","Month 1","Month 4"),
-  #                 labels=c("0", "1", "4"))+
-  scale_fill_manual(values=cohort.col)+
-  #geom_hline(yintercept = 6.67E+06,color="bisque3",linetype="dashed",size=2)+ # this is for dash line for limitation
-  ylab("HERV reads percentage")+
-  xlab("")+
-  coord_cartesian(ylim = c(0,10.2)) +
-  theme_classic()+
-  theme(axis.title = element_text(size=20,colour="black"),
-        axis.text = element_text(size=15,colour = "black"),
-        legend.direction = "horizontal",
-        legend.position = c(0.8,0.8),
-        legend.text = element_text(size = 15,colour = "black"),
-        legend.title = element_blank()
-  )
-ggsave("output/Fig.S2.pdf", plot = last_plot(), device = "pdf", path = NULL,
-       scale = 1, width = 7, height = 5, units = c("in"),
-       dpi = 300, limitsize = TRUE)
-#### End ####
+g<-ggbarplot(repeatp%>%filter(Study_group!="Germ-free Mice"), x = "Study_group", y = "hervp", 
+             add = c("mean_se", "jitter"),
+             color="library_type",
+             xlab = FALSE,
+             ylab=c("Herv reads percentage"),
+             palette = c(guan.color[5:6]),
+             position = position_dodge(0.8)
+)
+p<-ggpar(g,legend.title = "")
 
-#### Fig. S4 crAssphage ####
-meta <- read.delim(paste(meta.pa,"meta.data.txt",sep=""))
-veo.meta<-read.delim(paste(meta.pa,"veo.meta.txt",sep=""))
-read_bwa_crass <- function(filename1,filename2) {
-  p = read.delim(filename1, header=F,
-                 stringsAsFactors = FALSE)
-  names(p)<-c("family", 
-              "read",
-              "align.len","genome.len", "cov")
-  p<-p[,c(1,2,5)]
-    x<- p %>% filter(read>0)
-  if (nrow(x) == 0) {
-    x<-p[1,c("family","cov")]
-    x$cov<-0
-  } else {
-    x<- aggregate(.~family,x[,c("family","cov")],sum)
- 
-    y = read.delim(filename2, header=F,
-                   stringsAsFactors = FALSE)
-    names(y)<-c("family", 
-                "genome.len",
-                "mapped","unmapped")
-    y<-y %>% mutate (total.read=sum(mapped)+sum(unmapped))
-    y<-y[-nrow(y),c(1,2,3,5)]
-    z<-merge(x,y,all.y=T,by="family")
-    z<-z %>% mutate (rpkm=mapped/(genome.len/1000*total.read/1000000))
-    z<- z %>% arrange(desc(cov))
-    z<-z[,c(1,2,4,6)]
-    z[is.na(z$cov),"cov"] <- 0
-    z$sample_id<-strsplit(strsplit(filename1,"\\/")[[1]][length(strsplit(filename1,"\\/")[[1]])],"\\.")[[1]][1]
-    names(z)<-c("crass.family","cov","reads","rpkm","library_id")
-    return(z)
-  }
-}
-# function to make table 
-table_bwa_crass<- function(cohort,viralname){
-  path1 = paste(data.pa,"coverage/",cohort,"/",viralname,sep="")
-  filename.cov <- list.files(path = path1,full.names = TRUE,pattern = ".coverage")
-  filename.reads <- list.files(path = path1,full.names = TRUE,pattern = ".read")
-  bwa.cov.data <- mapply(read_bwa_crass,filename.cov,filename.reads,SIMPLIFY = FALSE) # mapply do not give list default as lapply, need simplify option
-  bwa.cov<-do.call(rbind,bwa.cov.data)
-  rownames(bwa.cov)<-NULL
-  return(bwa.cov)
-}  
-
-dis.crass<-table_bwa_crass("dis","crassphage")
-dis.crass<-merge(dis.crass,meta[,c("library_id","study_group")],by="library_id")
-dis.crass$Cohort<-"Discovery"
-dis.crass$Family<-"crAssphage"
-
-vali.crass<-table_bwa_crass("vali","crassphage")
-vali.crass<-merge(vali.crass,meta[,c("library_id","study_group")],by="library_id")
-vali.crass$Cohort<-"Validation"
-vali.crass$Family<-"crAssphage"
-
-veo.crass<-table_bwa_crass("veo","crassphage")
-veo.crass<-merge(veo.crass,veo.meta[,c("library_id","study_group")],by="library_id")
-veo.crass$Cohort<-"VEO"
-veo.crass$Family<-"crAssphage"
-
-l<-list(dis.crass,vali.crass,veo.crass)
-tmp<-do.call(rbind,l)
-
-tmp$inf<-"Uninfected"
-tmp[tmp$cov>=(1/3),"inf"]<-"Infected"
-tmp$inf<-factor(tmp$inf,levels=c("Infected","Uninfected"))
-
-tmp<-tmp %>% 
-  filter(Cohort=="Discovery"|Cohort=="VEO",
-         study_group=="Month 0"|study_group=="Month 1"|study_group=="Month 4"|study_group=="healthy"
-  )
-tmp<-tmp[which(tmp$crass.family %in% unique(tmp[tmp$inf=="Infected",]$crass.family)),]
-tmp$group<-gsub(tmp$study_group,pattern = "healthy",replacement = "Year 2~5")
-tmp$crass.family<-gsub(tmp$crass.family,
-                       pattern = c("CDZN01024782"),
-                       replacement = c("crAssphage member 1"))
-tmp$crass.family<-gsub(tmp$crass.family,
-                       pattern = c("CEAR01029167"),
-                       replacement = c("crAssphage member 2"))
-tmp$crass.family<-gsub(tmp$crass.family,
-                       pattern = c("Chlamydia_CVNZ01000019ext"),
-                       replacement = c("crAssphage member 3"))
-
-tmp$crass.family<-factor(tmp$crass.family,levels=c("crAssphage member 3","crAssphage member 2","crAssphage member 1","crAssphage"))
-g1<-  ggplot(tmp,aes(x = library_id, y = crass.family)) +
-  geom_tile(aes(fill=inf),color="grey", size=0.1)+
-  scale_fill_manual(values = c("black","white"))+
-  labs(x="",y="")+
-  theme_bw()+
-  theme(panel.border = element_blank(), panel.grid.major = element_blank(),
-        axis.ticks =element_blank(),
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(size=15,colour="black"),
-        strip.background = element_rect(linetype = 0),
-        strip.text.x  = element_text(size=20,colour="black"),
-        strip.text.y  = element_text(size=15,colour="black",angle = 360),
-        legend.position = "none"
-        
-  )+
-  facet_grid(.~study_group,scales = "free", space = "free")+
-  theme(aspect.ratio = 1)
-
-
-g <- ggplot_gtable(ggplot_build(g1))
-stript <- which(grepl('strip-t', g$layout$name))
-fills <- age.col
-k <- 1
-for (i in stript) {
-  j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
-  g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
-  k <- k+1
-}
-
-pdf("output/Fig.S4.pdf", width = 20, height = 5)
-grid.draw(g)
+pdf("output/extended.fig4.pdf",width =5,height = 3,useDingbats = F)
+p
 dev.off()
-
 #### End ####
+
+
 
 
 # rm(list=ls())

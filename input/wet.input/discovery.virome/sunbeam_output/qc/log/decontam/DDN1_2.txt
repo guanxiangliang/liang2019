@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+61570	0	61570	3057618

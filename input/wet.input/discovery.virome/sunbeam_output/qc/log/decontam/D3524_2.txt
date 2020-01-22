@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+1350	0	1350	6336547

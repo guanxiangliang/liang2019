@@ -1,0 +1,21 @@
+# Program:featureCounts v1.6.4; Command:"featureCounts" "-a" "D3259.orf.saf" "-F" "SAF" "-o" "D3259.orf.count" "D3259.bam" "-T" "4" 
+Geneid	Chr	Start	End	Strand	Length	D3259.bam
+D3259.contig1_1	D3259.contig1	3	428	+	426	16
+D3259.contig1_2	D3259.contig1	500	1363	+	864	89
+D3259.contig1_3	D3259.contig1	1383	2081	+	699	45
+D3259.contig1_4	D3259.contig1	2084	3241	+	1158	43
+D3259.contig1_5	D3259.contig1	3267	4739	+	1473	116
+D3259.contig1_6	D3259.contig1	4759	5667	+	909	42
+D3259.contig2_1	D3259.contig2	1	156	+	156	6
+D3259.contig2_2	D3259.contig2	163	2418	+	2256	219
+D3259.contig2_3	D3259.contig2	2437	4701	+	2265	187
+D3259.contig3_1	D3259.contig3	140	280	+	141	11
+D3259.contig3_2	D3259.contig3	290	829	+	540	57
+D3259.contig3_3	D3259.contig3	947	1486	+	540	32
+D3259.contig3_4	D3259.contig3	1446	2045	+	600	83
+D3259.contig3_5	D3259.contig3	2097	3152	+	1056	194
+D3259.contig3_6	D3259.contig3	3149	3499	+	351	27
+D3259.contig3_7	D3259.contig3	3503	3700	+	198	7
+D3259.contig3_8	D3259.contig3	3704	4132	+	429	46
+D3259.contig3_9	D3259.contig3	4152	4430	+	279	17
+D3259.contig3_10	D3259.contig3	4384	4689	+	306	8

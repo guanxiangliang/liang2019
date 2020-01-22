@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+59317	0	59317	1094125

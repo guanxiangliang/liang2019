@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+50011	0	50011	2267787

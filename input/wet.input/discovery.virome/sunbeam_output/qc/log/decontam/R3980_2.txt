@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+820992	0	820992	89454

@@ -38,8 +38,8 @@ do
         base=$(echo ${i} |awk -F. '{print $1}')
         samtools index ${i}
         bedtools genomecov -ibam ${base}.bam |grep -v  "genome" > ${base}.coverage
-        samtools idxstats ${base}.bam > ${base}.read
-        samtools idxstats ${base}.bam > ${base}.read
+        python code/python.code/couht.bam.py ${base}.bam > ${base}.read
+	#samtools idxstats ${base}.bam > ${base}.read
         rm *bam*
         cd ..
         done

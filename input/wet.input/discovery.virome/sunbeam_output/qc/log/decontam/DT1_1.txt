@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+24	0	24	3137603

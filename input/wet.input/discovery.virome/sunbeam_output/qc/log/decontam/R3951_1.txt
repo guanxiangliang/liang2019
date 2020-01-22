@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+193577	0	193577	1949070

@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+1508737	0	1508737	4717922

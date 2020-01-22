@@ -3,6 +3,7 @@ blast
 wget
 git
 R
+R-tidyverse
 R-ggplot2
 R-ggbeeswarm
 R-ggsci

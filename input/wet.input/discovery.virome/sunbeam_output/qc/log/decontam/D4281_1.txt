@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+107	0	107	4389515

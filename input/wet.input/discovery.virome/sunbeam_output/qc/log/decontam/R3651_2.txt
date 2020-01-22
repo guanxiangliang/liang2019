@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+7155	0	7155	2497610

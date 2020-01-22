@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+293473	0	293473	4761824

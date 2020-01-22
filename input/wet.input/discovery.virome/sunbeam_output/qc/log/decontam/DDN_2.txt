@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+54	1	55	3587502

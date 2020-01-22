@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+259232	1	259233	360812

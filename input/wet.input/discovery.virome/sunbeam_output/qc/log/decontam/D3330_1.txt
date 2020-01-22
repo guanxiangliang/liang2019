@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+398105	0	398105	5023764

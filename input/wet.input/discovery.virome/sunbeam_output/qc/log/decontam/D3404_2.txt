@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+372	0	372	5474252

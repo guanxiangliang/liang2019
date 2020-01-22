@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+2213168	0	2213168	4302871

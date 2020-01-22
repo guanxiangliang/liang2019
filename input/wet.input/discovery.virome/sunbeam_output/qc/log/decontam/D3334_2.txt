@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+228	0	228	4721403

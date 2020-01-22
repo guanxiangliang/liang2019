@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+12111	0	12111	104210

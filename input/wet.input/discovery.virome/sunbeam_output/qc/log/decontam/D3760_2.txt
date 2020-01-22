@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+6607846	2	6607848	338828

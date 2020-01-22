@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+13851	0	13851	2159543

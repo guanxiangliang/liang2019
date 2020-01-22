@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+5756539	3	5756542	93325

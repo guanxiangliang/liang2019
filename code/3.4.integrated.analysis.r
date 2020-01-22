@@ -11,24 +11,13 @@ library(dplyr)
 library(reshape)
 library(ggsci)
 library(viridis)
-library(viridisLite)
-library(viridis)
 library(tidyr) # separate function
 library(gtools) # mixedsort
 library(scales) # for trans_form in ggplot
 library(grid)
 library(RColorBrewer) # brew.col
 library(taxonomizr)### convert accession id to tax id and to names ###
-# getNamesAndNodes()
-# getAccession2taxid()
-# getAccession2taxid(types='prot')
-# read.names.sql('names.dmp','./input/database/ac2tax/accessionTaxa.sql')
-# read.nodes.sql('nodes.dmp','./input/database/ac2tax/accessionTaxa.sql')
-# read.accession2taxid(list.files('.','accession2taxid.gz$'),'./input/database/ac2tax/accessionTaxa.sql')
-# file.remove(list.files('.','accession2taxid.gz$'))
-# file.remove(list.files('.','dmp$'))
-# 
-# #### End ####
+#### End ####
 
 #### color set up using ggsci ####
 # all colror
@@ -105,86 +94,7 @@ dev.off()
 
 #### End #### 
 
-#### Fig.S1 Totalshotgun ####
-meta <- read.delim(paste(meta.pa,"meta.data.txt",sep=""))
-kraken <- read.delim(paste(data.pa,"shotgun.metagenome/sunbeam_output/classify/all_samples.tsv",sep=""), skip = 1)
-names(kraken) <- gsub(x = names(kraken),
-                      pattern = "\\.taxa",
-                      replacement = "\\")
-names(kraken) <- gsub(x = names(kraken),
-                      pattern = "\\.",
-                      replacement = "\\")
-names(kraken)[1]<-"tax_id" ## kraken is table with 1 is tax id, 2:157 are libraries, 158 is names
-lin <- read.delim(paste(data.pa,"shotgun.metagenome/sunbeam_output/classify/lineages.txt",sep="")) # lineages data by tax to baltimore
-host <- read.delim("input/meta.data/viral.host.txt") # virus host data
-kraken<-merge(kraken,lin,by="tax_id") # merge kraken and lineage data
-
-shotgun.sam<-meta %>% 
-  filter(Cohort=="Discovery",study_group=="Month 0"|study_group=="Month 1"|study_group=="Month 4",library_type=="shotgun") 
-
-kraken<-
-  kraken[,c("superkingdom",as.character(shotgun.sam$library_id))]
-kraken$superkingdom[1]<-"Bacteria" # the ifrst row did not show anything, its bacteria
-tmp<-aggregate(.~superkingdom,kraken,sum)
-
-filename<-list.files(path =paste(data.pa,"shotgun.metagenome/sunbeam_output/qc/log",sep="") ,full.names = TRUE,pattern = "1.txt")
-read_log<-function(x){
-y<-read.delim(x)
-y<-y[,c(1,4)]
-y$library_id<-strsplit(strsplit(x,"\\/")[[1]][8],"\\_")[[1]][1]
-return(y)
-}
-l<-lapply(filename,read_log)
-data<-do.call(rbind,l)
-names(data)<-c("Human", "nonhost" ,"library_id")
-
-tmp1<-as.data.frame(t(tmp[,-1])) # transpose number and string together will have problem
-tmp1$V4<-rownames(tmp1)
-rownames(tmp1)<-NULL
-names(tmp1)<-c(as.character(tmp$superkingdom), "library_id")
-
-
-tmp<- merge(tmp1,data,by="library_id")
-tmp<-tmp%>%mutate(Archaea.p=Archaea/(nonhost+Human),
-                  Bacteria.p=Bacteria/(nonhost+Human),
-                  Viruses.p=Viruses/(nonhost+Human),
-                  Human.p=Human/(nonhost+Human),
-                  Unassigned=1-(Archaea+Bacteria+Viruses+Human)/(nonhost+Human)
-                  )
-tmp<-tmp[,c("library_id","Archaea.p","Bacteria.p","Viruses.p","Unassigned","Human.p")]                 
-names(tmp)<-c("library_id","Archaea","Bacteria","Viruses","Unassigned","Human")
-
-data<-melt(tmp)
-names(data)<-c("library_id","Source","Percentage")
-# merge with prop data come from # total shot gun human reads vs 16s
-data<-merge(data,meta[,c("library_id","study_group")],by="library_id")
-data<-arrange(data,Source,Percentage) # sort by Source then by Percentage
-data$library_id<-factor(data$library_id,levels=unique(data[data$Source=="Bacteria",]$library_id),ordered = T) # change sample id order by bacteria percentage
-data$Source<-factor(data$Source,levels=c("Bacteria","Archaea","Viruses","Human","Unassigned"))
-
-ggplot(data,aes(y = Percentage*100, x = interaction(library_id,study_group), fill = Source))+
-  geom_bar(stat="identity")+
-  scale_fill_manual(values=color[1:6])+
-  labs(x ="",y="")+
-  facet_wrap(~study_group,scales ="free_x",nrow = 1 )+
-  theme(
-    axis.text.x=element_blank(),
-    axis.text.y = element_text(size=15,colour="black"),
-    axis.ticks.x=element_blank(),
-    panel.background = element_blank(),
-    legend.title=element_blank(),
-    legend.text = element_text(size=15,colour="black"),
-    strip.background = element_blank(),
-    strip.text = element_text(size=20,colour="black") 
-  )
-
-ggsave("output/Fig.S1.pdf", plot = last_plot(), device = "pdf", path = NULL,
-       scale = 1, width = 7, height = 3.5, units = c("in"),
-       dpi = 300, limitsize = TRUE)
-
-#### End ####
-
-#### Fig.2,C,D,E ####
+#### Fig.2,C,D ####
 # funtions needed
 uniprottax<-read.delim(paste(database.pa,"uniprot.virome/uniprot.virome.meta",sep=""),header=F)
 names(uniprottax)<-c("uniprot.hit.id","taxid","name")
@@ -357,7 +267,7 @@ coverage.plot<-function (com){
   
   com<-com[with(com, order(Contig, Position)), ]
   com[is.na(com)]<-0
-  com<-com[! com$Contig %in% levels(tmp$Contig), ]
+  #com<-com[!com$Contig %in% levels(tmp$Contig), ]
   com$Contig<-droplevels(com$Contig)
   com$Contig<-factor(com$Contig,levels=mixedsort(levels(com$Contig)))
   mtmp<-melt(com,id=c("Contig","Position"))
@@ -465,7 +375,7 @@ com<-Reduce(function(x, y) merge(x, y, all.x=TRUE,by=c("Contig","Position")), li
 wgs1.p<-coverage.plot(com)
 
 
-pdf("output/Fig.2C.1.pdf",width = 30, height = 8)
+pdf("output/wgs1.1.pdf",width = 30, height = 8)
 color=pal_npg(palette = c("nrc"), alpha = 1)(10)
 wgs1.p
 g <- ggplot_gtable(ggplot_build(wgs1.p))
@@ -486,7 +396,7 @@ grid.rect(x = 0.593, y = 0.5,
 dev.off()
 
 g<-genome.plot("wgs1")
-pdf("output/Fig.2C.2.pdf",width = 10, height = 2)
+pdf("output/wgs1.2.pdf",width = 10, height = 2)
 g
 dev.off()
 # end ####
@@ -511,7 +421,7 @@ com<-Reduce(function(x, y) merge(x, y, all.x=TRUE,by=c("Contig","Position")), li
 wgs2.p<-coverage.plot(com)
 
 
-pdf("output/Fig.2D.1.pdf",width = 30, height = 8)
+pdf("output/wgs2.1.pdf",width = 30, height = 8)
 color=pal_npg(palette = c("nrc"), alpha = 1)(10)
 wgs2.p
 g <- ggplot_gtable(ggplot_build(wgs2.p))
@@ -532,7 +442,7 @@ grid.rect(x = 0.55, y = 0.5,
 dev.off()
 
 g<-genome.plot("wgs2")
-pdf("output/Fig.2D.2.pdf",width = 10, height = 2)
+pdf("output/wgs2.2.pdf",width = 10, height = 2)
 g
 dev.off()
 # end ####
@@ -555,7 +465,7 @@ com<-Reduce(function(x, y) merge(x, y, all.x=TRUE,by=c("Contig","Position")), li
 wgs3.p<-coverage.plot(com)
 
 
-pdf("output/Fig.2E.1.pdf",width = 30, height = 8)
+pdf("output/wgs3.1.pdf",width = 30, height = 8)
 color=pal_npg(palette = c("nrc"), alpha = 1)(10)
 wgs3.p
 g <- ggplot_gtable(ggplot_build(wgs3.p))
@@ -576,13 +486,104 @@ grid.rect(x = 0.285, y = 0.5,
 dev.off()
 
 g<-genome.plot("wgs3")
-pdf("output/Fig.2E.2.pdf",width = 10, height = 2)
+pdf("output/wgs3.2.pdf",width = 10, height = 2)
+g
+dev.off()
+# end ####
+# wgs24 for genome coverage and phage genome annotation ####
+wgs24.contig<-wgs.contig.annotation("wgs24")[[1]]
+DM3754.cov<-coverage("DM3754","wgs24",path,wgs24.contig)
+names(DM3754.cov)<-c("Contig","Position","Mitomycin C")
+DNM3754.cov<-coverage("DNM3754","wgs24",path,wgs24.contig)
+names(DNM3754.cov)<-c("Contig","Position","No Inducer")
+D3754.cov<-coverage("D3754","wgs24",path,wgs24.contig)
+names(D3754.cov)<-c("Contig","Position","Purified VLP")
+wgs24.pro<-prophage("wgs24",path)
+names(wgs24.pro)<-c("Contig","Position","Prophage protein number")
+mito<-DM3754.cov
+nomito<-DNM3754.cov
+vlp<-D3754.cov
+#nc<-ncwgs24.cov
+pro<-wgs24.pro
+
+
+com<-NULL
+com<-Reduce(function(x, y) merge(x, y, all.x=TRUE,by=c("Contig","Position")), list(mito,nomito,vlp,pro)) # merge multiple dataframe
+wgs24.p<-coverage.plot(com)
+
+
+pdf("output/wgs24.1.pdf",width = 30, height = 8)
+color=pal_npg(palette = c("nrc"), alpha = 1)(10)
+wgs24.p
+g <- ggplot_gtable(ggplot_build(wgs24.p))
+stripl <- which(grepl('strip-l', g$layout$name))
+fills <- color[c(1:3,5)]
+k <- 1
+for (i in stripl) {
+  j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
+  g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
+  k <- k+1
+}
+grid.draw(g)
+grid.rect(x = 0.49, y = 0.5,
+          width = 0.02, height = 0.98,
+          just = "centre", hjust = NULL, vjust = NULL,
+          default.units = "npc", name = NULL,
+          gp=gpar(lwd = 4), draw = TRUE, vp = NULL)
+dev.off()
+
+g<-genome.plot("wgs24")
+pdf("output/wgs24.2.pdf",width = 10, height = 2)
+g
+dev.off()
+# end ####
+# wgs25 for genome coverage and phage genome annotation ####
+wgs25.contig<-wgs.contig.annotation("wgs25")[[1]]
+DM3951.cov<-coverage("DM3951","wgs25",path,wgs25.contig)
+names(DM3951.cov)<-c("Contig","Position","Mitomycin C")
+mito<-DM3951.cov
+DNM3951.cov<-coverage("DNM3951","wgs25",path,wgs25.contig)
+names(DNM3951.cov)<-c("Contig","Position","No Inducer")
+nomito<-DNM3951.cov
+wgs25.D3951.cov<-coverage("D3951","wgs25",path,wgs25.contig)
+names(wgs25.D3951.cov)<-c("Contig","Position","Purified VLP")
+vlp<-wgs25.D3951.cov
+wgs25.pro<-prophage("wgs25",path)
+names(wgs25.pro)<-c("Contig","Position","Prophage protein number")
+pro<-wgs25.pro
+com<-NULL
+com<-Reduce(function(x, y) merge(x, y, all.x=TRUE,by=c("Contig","Position")), list(mito,nomito,vlp,pro)) # merge multiple dataframe
+wgs25.p<-coverage.plot(com)
+
+
+pdf("output/wgs25.1.pdf",width = 30, height = 8)
+color=pal_npg(palette = c("nrc"), alpha = 1)(10)
+wgs25.p
+g <- ggplot_gtable(ggplot_build(wgs25.p))
+stripl <- which(grepl('strip-l', g$layout$name))
+fills <- color[c(1:3,5)]
+k <- 1
+for (i in stripl) {
+  j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
+  g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
+  k <- k+1
+}
+grid.draw(g)
+grid.rect(x = 0.824, y = 0.5,
+          width = 0.012, height = 0.98,
+          just = "centre", hjust = NULL, vjust = NULL,
+          default.units = "npc", name = NULL,
+          gp=gpar(lwd = 4), draw = TRUE, vp = NULL)
+dev.off()
+
+g<-genome.plot("wgs25")
+pdf("output/wgs25.2.pdf",width = 10, height = 2)
 g
 dev.off()
 # end ####
 #### End ####
 
-#### Fig.2F and 2G, S6 ####
+#### Extended Fig.6a ####
 pa<-paste(data.pa,"induced.virome/my.analysis/induced.vlp.to.stool.vlp",sep="")
 names<-grep(list.files(path=pa), pattern='.txt', inv=T, value=T) # exclude .txt files
 read_idx<-function(x){
@@ -592,12 +593,12 @@ read_idx<-function(x){
               "mapped","unmapped")  
   y<-y %>% mutate (total.read=sum(mapped)+sum(unmapped))
   y<-y[-nrow(y),c("contig","mapped","total.read")]
-  y$vlp<-strsplit(strsplit(x,"\\/")[[1]][length(strsplit(x,"\\/")[[1]])],"\\.")[[1]][1]
+  y$vlp<-strsplit(strsplit(x,"\\/")[[1]][8],"\\.")[[1]][1]
   return(y)
 }
 read_induced_vlp<-function(x){
   pa<-paste(data.pa,"induced.virome/my.analysis/induced.vlp.to.stool.vlp",sep="")
-  pa1<-paste(pa,"/",x,"/",sep="")
+  pa1<-paste(pa,"/",x,sep="")
   z=list.files(pa1,patter=".txt",full.names = T)
   y<-lapply(z,read_idx)
   y<-do.call(rbind,y)
@@ -608,35 +609,47 @@ data<-do.call(rbind,data)
 data<-data %>% separate(col=contig,into = c("induced","contig"))
 tmp1<-data[which(substring(data$vlp,2)==substring(data$induced,3)),]
 tmp2<-data[which(substring(data$vlp,2)!=substring(data$induced,3)),]
-tmp1$group<-"Autologous"
-tmp2$group<-"Heterologous"
+tmp1$group<-"within infants"
+tmp2$group<-"between infants"
 data<-rbind(tmp1,tmp2)
-data<-data %>% mutate(percentage=mapped/total.read)
+data<-data %>% mutate(percentage=mapped/total.read*100)
+data$group<-factor(data$group,levels=c("within infants","between infants"))
+
 tmp<-data[,c("group","percentage")]
 tmp1<-aggregate(. ~ group,tmp, mean)
 tmp2<-aggregate(. ~ group,tmp, function(x) {sd(x)/sqrt(length(x))}) # this is for standard erro
 mtmp<-cbind(tmp1,tmp2[,2])
 names(mtmp)<-c("Group","mean","se")
-g1<-ggplot(mtmp,aes(Group,mean*100,width=0.5))+
-  geom_bar(stat="identity", color="black",fill="grey",size=1,position=position_dodge())+
-  geom_errorbar(aes(ymin=100*mean, ymax=100*mean+100*se), width=0.2,size=1,
-                position=position_dodge(.9)) +
-  scale_y_continuous(breaks=c(0,1,2),limits = c(0,2))+
+
+
+#g<-ggplot(mtmp,aes(Group,mean,width=0.5))+
+#geom_bar(stat="identity", color="black",fill="grey",size=1,position=position_dodge())+
+#geom_errorbar(aes(ymin=mean, ymax=mean+se), width=0.2,size=1,
+#               position=position_dodge(.9)) +
+g<-ggplot(data,aes(x=group,y=percentage))+
+  geom_boxplot()+
+  #geom_jitter(width = 0.2 )+
+  scale_y_continuous(breaks=c(0,1,2))+
+  coord_cartesian(ylim=c(0,2))+
   #scale_fill_manual(values=two.col)+
-  ylab("Percentage (%)")+
+  #geom_beeswarm(data=data,mapping = aes(x=group,y=percentage),cex=0.1,alpha=0.8,size=3,shape=21,colour="white",fill="black",groupOnX = T)+
+  ylab("% gut VLP reads matching\ninduced VLP contigs")+
   xlab("")+
-  annotate("text", x=c(1.5), y=c(2),size=5, label= c(expression(paste(italic(P)," < 0.0001"))))+
+  annotate("text", x=c(1.5), y=c(2),size=5, label= c(expression(paste(italic(P)," = 1 × ","10"^-14))))+
   annotate("segment", x = c(1.05), xend = c(1.95), y = c(1.9), yend = c(1.9))+
   theme_classic()+
   theme(
-    axis.title.y  = element_text(size=35,colour="black", margin =margin(t = 0, r = 10, b = 0, l = 0)),
-    axis.text = element_text(size=30,colour = "black"),
+    axis.title.y  = element_text(size=25,colour="black", margin =margin(t = 0, r = 10, b = 0, l = 0)),
+    axis.text = element_text(size=20,colour = "black"),
     legend.position = "none"
   )
-ggsave("output/Fig.2F.pdf",width = 7,height =5 )
-wilcox.test(data[data$group=="Autologous","percentage"],tmp[tmp$group=="Heterologous","percentage"])
+pdf("output/extedned.fig6a.pdf", width = 7, height = 5,useDingbats = F)
+g
+dev.off()
+wilcox.test(data[data$group=="within infants","percentage"],tmp[tmp$group=="between infants","percentage"])
+#### End ####
 
-# Fig.2G
+#### Fig.2e, extended fig.6b ####
 tmp<-read.delim(paste(data.pa,"combined.txt",sep=""))
 tmp$Inducer<-factor(tmp$Inducer,levels=c("Mitomycin C","Carbadox","Cipro","No inducer"))
 tmp<- tmp %>% filter(uniprot.total.orf.number>0)
@@ -667,7 +680,7 @@ ggplot(tmp[tmp$Inducer=="Mitomycin C",],aes(x = shot.p+10e-10,y = vlp.p+10e-10))
     axis.title.y=element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))
   )
 
-ggsave("output/Fig.2G.pdf", plot = last_plot(), device = "pdf", path = NULL,
+ggsave("output/Fig.2e.pdf", plot = last_plot(), device = "pdf", path = NULL,
        scale = 1, width = 9, height = 7, units = c("in"),
        dpi = 300, limitsize = TRUE)
 
@@ -702,7 +715,7 @@ ggplot(tmp[tmp$Inducer=="No inducer",],aes(x = shot.p+10e-10,y = vlp.p+10e-10))+
     axis.title.y=element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))
   )
 
-ggsave("output/Fig.S6.pdf", plot = last_plot(), device = "pdf", path = NULL,
+ggsave("output/extended.fig.6b.pdf", plot = last_plot(), device = "pdf", path = NULL,
        scale = 1, width = 9, height = 7, units = c("in"),
        dpi = 300, limitsize = TRUE)
 

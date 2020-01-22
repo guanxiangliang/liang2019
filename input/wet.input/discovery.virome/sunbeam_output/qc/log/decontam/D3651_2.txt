@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+106	0	106	5454494

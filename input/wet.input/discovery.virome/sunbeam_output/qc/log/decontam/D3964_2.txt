@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+20629	0	20629	1683703

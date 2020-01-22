@@ -1,0 +1,12 @@
+# Program:featureCounts v1.6.4; Command:"featureCounts" "-a" "D3266.orf.saf" "-F" "SAF" "-o" "D3266.orf.count" "D3266.bam" "-T" "4" 
+Geneid	Chr	Start	End	Strand	Length	D3266.bam
+D3266.contig1_1	D3266.contig1	1	219	+	219	15
+D3266.contig1_2	D3266.contig1	238	426	+	189	14
+D3266.contig1_3	D3266.contig1	616	882	+	267	41
+D3266.contig1_4	D3266.contig1	967	1218	+	252	29
+D3266.contig1_5	D3266.contig1	1267	1965	+	699	64
+D3266.contig1_6	D3266.contig1	1962	2099	+	138	2
+D3266.contig1_7	D3266.contig1	2096	2776	+	681	79
+D3266.contig1_8	D3266.contig1	2718	3866	+	1149	89
+D3266.contig1_9	D3266.contig1	3863	4135	+	273	19
+D3266.contig1_10	D3266.contig1	4360	5166	+	807	42

@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+5626697	2	5626699	199164

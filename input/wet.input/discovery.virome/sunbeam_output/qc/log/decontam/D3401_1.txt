@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+180	1	181	4126715

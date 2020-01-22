@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+391290	0	391290	495120

@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+185886	0	185886	551311

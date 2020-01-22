@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+9995	0	9995	4422674

@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+297607	1	297608	646821

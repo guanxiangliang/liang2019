@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+357540	0	357540	503698

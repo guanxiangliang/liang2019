@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+142	0	142	5114947

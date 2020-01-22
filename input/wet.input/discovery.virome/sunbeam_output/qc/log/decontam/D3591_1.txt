@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+214	0	214	5570701

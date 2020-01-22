@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+32842	0	32842	1478963

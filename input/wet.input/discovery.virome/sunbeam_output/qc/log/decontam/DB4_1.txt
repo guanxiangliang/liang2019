@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+150	0	150	2245792

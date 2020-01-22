@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+300241	0	300241	445156

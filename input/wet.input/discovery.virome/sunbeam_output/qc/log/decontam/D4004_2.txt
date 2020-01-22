@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+508	0	508	4057108

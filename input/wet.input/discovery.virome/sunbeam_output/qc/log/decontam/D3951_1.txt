@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+3865	0	3865	4154751

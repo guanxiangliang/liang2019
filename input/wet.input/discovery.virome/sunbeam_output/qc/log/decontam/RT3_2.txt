@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+482000	0	482000	374309

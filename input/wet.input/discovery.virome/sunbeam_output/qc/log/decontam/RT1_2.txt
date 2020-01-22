@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+8060	0	8060	52640

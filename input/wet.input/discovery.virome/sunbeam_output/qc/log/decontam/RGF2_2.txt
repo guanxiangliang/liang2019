@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+66927	0	66927	433577

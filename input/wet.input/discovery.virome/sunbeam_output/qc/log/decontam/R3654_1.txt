@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+39822	0	39822	2077698

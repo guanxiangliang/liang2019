@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+3868498	0	3868498	1331891

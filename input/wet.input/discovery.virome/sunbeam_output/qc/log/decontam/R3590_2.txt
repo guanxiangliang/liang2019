@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+35010	1	35011	30649

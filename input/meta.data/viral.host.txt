@@ -1,23 +1,114 @@
 family	host	host.name
+Phycodnaviridae	Algae	Algae DNA Viruses
+Pithoviridae	Eukaryotes	Amoeba DNA Viruses
+Adenoviridae	Animals	Animal DNA Viruses
+Anelloviridae	Animals	Animal DNA Viruses
+Herpesviridae	Animals	Animal DNA Viruses
+Parvoviridae	Animals	Animal DNA Viruses
+Polyomaviridae	Animals	Animal DNA Viruses
+Circoviridae	Animals	Animal DNA Viruses
+Alloherpesviridae	Animals	Animal DNA Viruses
+Papillomaviridae	Animals	Animal DNA Viruses
+Poxviridae	Animals	Animal DNA Viruses
+Astroviridae	Animals	Animal RNA Viruses
+Caliciviridae	Animals	Animal RNA Viruses
+Picornaviridae	Animals	Animal RNA Viruses
+Peribunyaviridae	Animals	Animal RNA Viruses
+Picobirnaviridae	Animals	Animal RNA Viruses
+Retroviridae	Animals	Animal RNA Viruses
+Flaviviridae	Animals	Animal RNA Viruses
+Pneumoviridae	Animals	Animal RNA Viruses
+Aeropyrum	Archaea	Archaeal Viruses
+Ampullaviridae	Archaea	Archaeal Viruses
+Bicaudaviridae	Archaea	Archaeal DNA Viruses
+Fuselloviridae	Archaea	Archaeal Viruses
+Globuloviridae	Archaea	Archaeal Viruses
+Guttaviridae	Archaea	Archaeal Viruses
+Halovirus	Archaea	Archaeal Viruses
+Hyperthermophilic	Archaea	Archaeal Viruses
+Lipothrixviridae	Archaea	Archaeal Viruses
+Pyrobaculum	Archaea	Archaeal Viruses
+Pyrococcus	Archaea	Archaeal Viruses
+Rudiviridae	Archaea	Archaeal Viruses
+Salterprovirus	Archaea	Archaeal Viruses
+Sulfolobales	Archaea	Archaeal Viruses
+Sulfolobus	Archaea	Archaeal Viruses
+Thermococcus	Archaea	Archaeal Viruses
+Turriviridae	Archaea	Archaeal Viruses
+Ackermannviridae	Bacteria	Bacteriophages
+Inoviridae	Bacteria	Bacteriophages
+Microviridae	Bacteria	Bacteriophages
+Myoviridae	Bacteria	Bacteriophages
+Podoviridae	Bacteria	Bacteriophages
+Siphoviridae	Bacteria	Bacteriophages
+Sphaerolipoviridae	Bacteria	Bacteriophages
+Aurantimonas	Bacteria	Bacteriophages
+Bacillus	Bacteria	Bacteriophages
+Brucella	Bacteria	Bacteriophages
+Celeribacter	Bacteria	Bacteriophages
+Cellulophaga	Bacteria	Bacteriophages
+Clostridium	Bacteria	Bacteriophages
+Corticoviridae	Bacteria	Bacteriophages
+Cyanophage	Bacteria	Bacteriophages
+Deep-sea	Bacteria	Bacteriophages
+Enterobacteria	Bacteria	Bacteriophages
+Enterococcus	Bacteria	Bacteriophages
+Erwinia	Bacteria	Bacteriophages
+Flavobacterium	Bacteria	Bacteriophages
+Geobacillus	Bacteria	Bacteriophages
+Halorubrum	Bacteria	Bacteriophages
+Hydrogenobaculum	Bacteria	Bacteriophages
+Idiomarinaceae	Bacteria	Bacteriophages
+Lactobacillus	Bacteria	Bacteriophages
+Loktanella	Bacteria	Bacteriophages
+Marinomonas	Bacteria	Bacteriophages
+Mycoplasma	Bacteria	Bacteriophages
+Nitrincola	Bacteria	Bacteriophages
+Oenococcus	Bacteria	Bacteriophages
+Paenibacillus	Bacteria	Bacteriophages
+Phormidium	Bacteria	Bacteriophages
+Plasmaviridae	Bacteria	Bacteriophages
+Pleolipoviridae	Bacteria	Bacteriophages
+Prochlorococcus	Bacteria	Bacteriophages
+Propionibacterium	Bacteria	Bacteriophages
+Providencia	Bacteria	Bacteriophages
+Pseudoalteromonas	Bacteria	Bacteriophages
+Pseudomonas	Bacteria	Bacteriophages
+Ralstonia	Bacteria	Bacteriophages
+Rhizobium	Bacteria	Bacteriophages
+Rhodobacter	Bacteria	Bacteriophages
+Rhodococcus	Bacteria	Bacteriophages
+Salicola	Bacteria	Bacteriophages
+Salisaeta	Bacteria	Bacteriophages
+Salmonella	Bacteria	Bacteriophages
+Sinorhizobium	Bacteria	Bacteriophages
+Sodalis	Bacteria	Bacteriophages
+Staphylococcus	Bacteria	Bacteriophages
+Streptococcus	Bacteria	Bacteriophages
+Sulfitobacter	Bacteria	Bacteriophages
+Synechococcus	Bacteria	Bacteriophages
+Tectiviridae	Bacteria	Bacteriophages
+Tetraselmis	Bacteria	Bacteriophages
+Tetrasphaera	Bacteria	Bacteriophages
+Thermus	Bacteria	Bacteriophages
+uncultured	Bacteria	Bacteriophages
+Vibrio	Bacteria	Bacteriophages
+Xanthomonas	Bacteria	Bacteriophages
+crAssphage	Bacteria	Bacteriophages
+Herelleviridae	Bacteria	Bacteriophages
 Abalone	Animals	Eukaryotic Viruses
 Acheta	Animals	Eukaryotic Viruses
-Ackermannviridae	Bacteria	Bacteriophages
 Acyrthosiphon	Animals	Eukaryotic Viruses
 Adelphocoris	Animals	Eukaryotic Viruses
-Adenoviridae	Animals	Animal DNA Viruses
 Aedes	Eukaryotes	Eukaryotic Viruses
-Aeropyrum	Archaea	Archaeal Viruses
 Ageratum	Plants	Eukaryotic Viruses
 Alfalfa	Plants	Eukaryotic Viruses
-Alloherpesviridae	Animals	Animal DNA Viruses
 Alphaflexiviridae	Fungi&Plants	Eukaryotic Viruses
 Alphatetraviridae	Animals	Eukaryotic Viruses
 Alternaria	Fungi	Eukaryotic Viruses
 Alvernaviridae	Algae	Eukaryotic Viruses
 Amalgaviridae	Animals	Eukaryotic Viruses
-Ampullaviridae	Archaea	Archaeal Viruses
 Ancient	Environment	Eukaryotic Viruses
-Anelloviridae	Animals	Animal DNA Viruses
 Anopheline-associated	Animals	Eukaryotic Viruses
 Anphevirus	Animals	Eukaryotic Viruses
 Antarctic	Environment	Eukaryotic Viruses
@@ -28,26 +119,18 @@ Arenaviridae	Animals	Eukaryotic Viruses
 Arhar	Plants	Eukaryotic Viruses
 Arlivirus	Animals	Eukaryotic Viruses
 Arteriviridae	Animals	Eukaryotic Viruses
-Ascoviridae	Animals	Eukaryotic Viruses
-Asfarviridae	Animals	Eukaryotic Viruses
 Aspergillus	Fungi	Eukaryotic Viruses
-Astroviridae	Animals	Animal RNA Viruses
 Aumaivirus	Plants	Eukaryotic Viruses
-Aurantimonas	Bacteria	Bacteriophages
 Bacilladnavirus	Algae	Eukaryotic Viruses
 Bacillarnavirus	Algae	Eukaryotic Viruses
-Bacillus	Bacteria	Bacteriophages
-Baculoviridae	Animals	Eukaryotic Viruses
 Bamboo	Plants	Eukaryotic Viruses
 Barnaviridae	Fungi	Eukaryotic Viruses
 Beet	Plants	Eukaryotic Viruses
 Begomovirus-associated	Plants	Eukaryotic Viruses
 Beihai	Animals	Eukaryotic Viruses
 Benyviridae	Plants	Eukaryotic Viruses
-Betaflexiviridae	Plants	Eukaryotic Viruses
 Bhendi	Plants	Eukaryotic Viruses
 Bhindi	Plants	Eukaryotic Viruses
-Bicaudaviridae	Archaea	Archaeal Viruses
 Bidnaviridae	Animals	Eukaryotic Viruses
 Big	Animals	Eukaryotic Viruses
 Biomphalaria	Animals	Eukaryotic Viruses
@@ -66,9 +149,7 @@ Bovine	Animals	Eukaryotic Viruses
 Bradson	Animals	Eukaryotic Viruses
 Bromoviridae	Plants	Eukaryotic Viruses
 Bromus-associated	Plants	Eukaryotic Viruses
-Brucella	Bacteria	Bacteriophages
 Burke-Gilman	Animals	Eukaryotic Viruses
-Caliciviridae	Animals	Animal RNA Viruses
 Canine	Animals	Eukaryotic Viruses
 Cardamom	Plants	Eukaryotic Viruses
 Carmotetraviridae	Animals	Eukaryotic Viruses
@@ -76,8 +157,6 @@ Carrot	Plants	Eukaryotic Viruses
 Cassava	Plants	Eukaryotic Viruses
 Caulimoviridae	Plants	Eukaryotic Viruses
 Cedratvirus	Protozoa	Eukaryotic Viruses
-Celeribacter	Bacteria	Bacteriophages
-Cellulophaga	Bacteria	Bacteriophages
 Cereal	Plants	Eukaryotic Viruses
 Chaetoceros	Algae	Eukaryotic Viruses
 Chamois	Animals	Eukaryotic Viruses
@@ -88,22 +167,17 @@ Chicory	Plants	Eukaryotic Viruses
 Chilli	Plants	Eukaryotic Viruses
 CHIV14	Environment	Eukaryotic Viruses
 Chronic	Animals	Eukaryotic Viruses
-Chrysoviridae	Fungi	Eukaryotic Viruses
 Cilevirus	Plants	Eukaryotic Viruses
 Circo-like	Environment	Eukaryotic Viruses
-Circoviridae	Animals	Eukaryotic Viruses
 Circovirus-like	Environment	Eukaryotic Viruses
 Circulifer	Animals	Eukaryotic Viruses
 Cladosporium	Fungi	Eukaryotic Viruses
 Cleome	Plants	Eukaryotic Viruses
-Closteroviridae	Plants	Eukaryotic Viruses
-Clostridium	Bacteria	Bacteriophages
 Coconut	Plants	Eukaryotic Viruses
 Colletotrichum	Fungi	Eukaryotic Viruses
 Cordoba	Animals	Eukaryotic Viruses
 Corey	Animals	Eukaryotic Viruses
-Coronaviridae	Animals	Eukaryotic Viruses
-Corticoviridae	Bacteria	Bacteriophages
+Coronaviridae	Animals	Animal RNA Viruses
 Cotton	Plants	Eukaryotic Viruses
 Croton	Plants	Eukaryotic Viruses
 Crustavirus	Animals	Eukaryotic Viruses
@@ -114,12 +188,9 @@ Cucumber	Plants	Eukaryotic Viruses
 Cucurbit	Plants	Eukaryotic Viruses
 Culex	Eukaryotes	Eukaryotic Viruses
 Curvularia	Fungi	Eukaryotic Viruses
-Cyanophage	Bacteria	Bacteriophages
 Cyanoramphus	Environment	Eukaryotic Viruses
 Cymbidium	Plants	Eukaryotic Viruses
-Cystoviridae	Bacteria	Bacteriophages
 Daeseongdong	Animals	Eukaryotic Viruses
-Deep-sea	Bacteria	Bacteriophages
 Deer	Animals	Eukaryotic Viruses
 Delisea	Algae	Eukaryotic Viruses
 Deltavirus	Animals	Eukaryotic Viruses
@@ -135,22 +206,16 @@ Dunaliella	Algae	Eukaryotic Viruses
 Duwamo	Environment	Eukaryotic Viruses
 Egaro	Environment	Eukaryotic Viruses
 Endornaviridae	Fungi&Plants	Eukaryotic Viruses
-Enterobacteria	Bacteria	Bacteriophages
-Enterococcus	Bacteria	Bacteriophages
-Erwinia	Bacteria	Bacteriophages
 Ethiopian	Plants	Eukaryotic Viruses
 Euphorbia	Plants	Eukaryotic Viruses
 Faba	Plants	Eukaryotic Viruses
 Filoviridae	Animals	Eukaryotic Viruses
 Fimoviridae	Plants	Eukaryotic Viruses
 Fisavirus	Animals	Eukaryotic Viruses
-Flaviviridae	Animals	Eukaryotic Viruses
 flavivirus	Flaviviridae	Eukaryotic Viruses
-Flavobacterium	Bacteria	Bacteriophages
 Fort	Animals	Eukaryotic Viruses
 Fusarium	Fungi&Plants	Eukaryotic Viruses
 Fusariviridae	Fungi	Eukaryotic Viruses
-Fuselloviridae	Archaea	Archaeal Viruses
 Gamboa	Animals	Eukaryotic Viruses
 Gammaflexiviridae	Fungi	Eukaryotic Viruses
 Gastropod	Animals	Eukaryotic Viruses
@@ -158,55 +223,41 @@ Geminiviridae	Plants	Eukaryotic Viruses
 gemycircularvirus	Genomoviridae	Eukaryotic Viruses
 Genomoviridae	Animals	Eukaryotic Viruses
 Gentian	Plants	Eukaryotic Viruses
-Geobacillus	Bacteria	Bacteriophages
-Globuloviridae	Archaea	Archaeal Viruses
 Gorilla	Animals	Eukaryotic Viruses
 Gossypium	Plants	Eukaryotic Viruses
 Goutanap	Animals	Eukaryotic Viruses
 Grapevine	Plants	Eukaryotic Viruses
 Groundnut	Plants	Eukaryotic Viruses
 Guar	Plants	Eukaryotic Viruses
-Guttaviridae	Archaea	Archaeal Viruses
 Halastavi	Animals	Eukaryotic Viruses
-Halorubrum	Bacteria	Bacteriophages
-Halovirus	Archaea	Archaeal Viruses
 Hantaviridae	Animals	Eukaryotic Viruses
 Hepadnaviridae	Animals	Eukaryotic Viruses
 Hepeviridae	Animals	Eukaryotic Viruses
-Herpesviridae	Animals	Animal DNA Viruses
 Hibiscus	Plants	Eukaryotic Viruses
 Higrevirus	Plants	Eukaryotic Viruses
 Hollyhock	Plants	Eukaryotic Viruses
 Hubei	Animals	Eukaryotic Viruses
 Human	Animals	Eukaryotic Viruses
 Husa-like	Animals	Eukaryotic Viruses
-Hydrogenobaculum	Bacteria	Bacteriophages
-Hyperthermophilic	Archaea	Archaeal Viruses
 Hypoviridae	Fungi	Eukaryotic Viruses
 Hytrosaviridae	Animals	Eukaryotic Viruses
 Idaeovirus	Plants	Eukaryotic Viruses
-Idiomarinaceae	Bacteria	Bacteriophages
 Iflaviridae	Animals	Eukaryotic Viruses
 Imjin	Animals	Eukaryotic Viruses
-Inoviridae	Bacteria	Bacteriophages
-Iridoviridae	Animals	Eukaryotic Viruses
+Iridoviridae	Invertebrate	Invertebrate DNA Viruses
 Jingmen	Animals	Eukaryotic Viruses
 Kaumoebavirus	Protozoa	Eukaryotic Viruses
 Kelp	Animals	Eukaryotic Viruses
 Kilifi	Animals	Eukaryotic Viruses
 Labyrnavirus	Algae	Eukaryotic Viruses
-Lactobacillus	Bacteria	Bacteriophages
 Lake	Environment	Eukaryotic Viruses
 Lavidaviridae	Protozoa	Eukaryotic Viruses
 Lemur	Animals	Eukaryotic Viruses
 Leptopilina	Animals	Eukaryotic Viruses
 Leshenault	Eukaryotes	Eukaryotic Viruses
-Leviviridae	Bacteria	Bacteriophages
-Lipothrixviridae	Archaea	Archaeal Viruses
 Livupivirus	Animals	Eukaryotic Viruses
 Llama	Animals	Eukaryotic Viruses
 Lodeiro	Animals	Eukaryotic Viruses
-Loktanella	Bacteria	Bacteriophages
 Lonestar	Animals	Eukaryotic Viruses
 Lucerne	Plants	Eukaryotic Viruses
 Luteoviridae	Plants	Eukaryotic Viruses
@@ -214,7 +265,6 @@ Magnaporthe	Fungi	Eukaryotic Viruses
 Malacoherpesviridae	Animals	Eukaryotic Viruses
 Malvastrum	Plants	Eukaryotic Viruses
 Marine	Environment	Eukaryotic Viruses
-Marinomonas	Bacteria	Bacteriophages
 Marnaviridae	Algae	Eukaryotic Viruses
 Marseilleviridae	Animals&Protozoa	Eukaryotic Viruses
 McMurdo	Algae	Eukaryotic Viruses
@@ -223,14 +273,10 @@ Melon	Plants	Eukaryotic Viruses
 Mesoniviridae	Animals	Eukaryotic Viruses
 Mesta	Plants	Eukaryotic Viruses
 Micromonas	Algae	Eukaryotic Viruses
-Microviridae	Bacteria	Bacteriophages
 Milk	Plants	Eukaryotic Viruses
-Mimiviridae	Protozoa	Eukaryotic Viruses
 Mimosa	Plants	Eukaryotic Viruses
 Mollivirus	Protozoa	Eukaryotic Viruses
-Mycoplasma	Bacteria	Bacteriophages
 Mymonaviridae	Fungi	Eukaryotic Viruses
-Myoviridae	Bacteria	Bacteriophages
 Nairoviridae	Animals	Eukaryotic Viruses
 Nanoviridae	Plants	Eukaryotic Viruses
 narna-like	Animals	Eukaryotic Viruses
@@ -240,13 +286,11 @@ Nepavirus	Environment	Eukaryotic Viruses
 Nesidiocoris	Animals	Eukaryotic Viruses
 New	Plants	Eukaryotic Viruses
 Nimaviridae	Animals	Eukaryotic Viruses
-Nitrincola	Bacteria	Bacteriophages
 Nodaviridae	Animals	Eukaryotic Viruses
 Nora	Animals	Eukaryotic Viruses
 Nudiviridae	Animals	Eukaryotic Viruses
 Nyamiviridae	Animals	Eukaryotic Viruses
 Nylanderia	Animals	Eukaryotic Viruses
-Oenococcus	Bacteria	Bacteriophages
 Okra	Plants	Eukaryotic Viruses
 Olive	Plants	Eukaryotic Viruses
 Ophioviridae	Plants	Eukaryotic Viruses
@@ -255,73 +299,42 @@ Ostreococcus	Algae	Eukaryotic Viruses
 Ourmiavirus	Plants	Eukaryotic Viruses
 Oyster	Fungi	Eukaryotic Viruses
 Pacmanvirus	Protozoa	Eukaryotic Viruses
-Paenibacillus	Bacteria	Bacteriophages
 Pandoravirus	Protozoa	Eukaryotic Viruses
 Papanivirus	Plants	Eukaryotic Viruses
 Papaya	Plants	Eukaryotic Viruses
-Papillomaviridae	Animals	Animal DNA Viruses
 Paramyxoviridae	Animals	Eukaryotic Viruses
 Parthenium	Plants	Eukaryotic Viruses
 Partitiviridae	Fungi&Plants	Eukaryotic Viruses
-Parvoviridae	Animals	Animal DNA Viruses
 Pea	Plants	Eukaryotic Viruses
 Peanut	Plants	Eukaryotic Viruses
 Pedilanthus	Plants	Eukaryotic Viruses
 Penicillium	Fungi	Eukaryotic Viruses
-Peribunyaviridae	Animals	Eukaryotic Viruses
 Permutotetraviridae	Animals	Eukaryotic Viruses
 Persimmon	Plants	Eukaryotic Viruses
 Phaeocystis	Algae	Eukaryotic Viruses
 Phenuiviridae	Animals	Eukaryotic Viruses
 Phomopsis	Fungi	Eukaryotic Viruses
-Phormidium	Bacteria	Bacteriophages
-Phycodnaviridae	Algae	Eukaryotic Viruses
 Phytophthora	Fungi	Eukaryotic Viruses
-Picobirnaviridae	Animals	Eukaryotic Viruses
 Picorna-like	Animals	Eukaryotic Viruses
 Picornavirales	Animals	Eukaryotic Viruses
-Picornaviridae	Animals	Animal RNA Viruses
 Pig	Environment	Eukaryotic Viruses
 Pithovirus	Protozoa	Eukaryotic Viruses
 Planaria	Animals	Eukaryotic Viruses
-Plasmaviridae	Bacteria	Bacteriophages
-Pleolipoviridae	Bacteria	Bacteriophages
-Pneumoviridae	Animals	Eukaryotic Viruses
-Podoviridae	Bacteria	Bacteriophages
 Point-Douro	Eukaryotes	Eukaryotic Viruses
 Polemovirus	Plants	Eukaryotic Viruses
 Polydnaviridae	Animals	Eukaryotic Viruses
-Polyomaviridae	Animals	Animal DNA Viruses
 Posavirus	Animals	Eukaryotic Viruses
 PoSCV	Environment	Eukaryotic Viruses
 Potyviridae	Plants	Eukaryotic Viruses
-Poxviridae	Animals	Animal DNA Viruses
-Prochlorococcus	Bacteria	Bacteriophages
-Propionibacterium	Bacteria	Bacteriophages
-Providencia	Bacteria	Bacteriophages
-Pseudoalteromonas	Bacteria	Bacteriophages
-Pseudomonas	Bacteria	Bacteriophages
-Pyrobaculum	Archaea	Archaeal Viruses
-Pyrococcus	Archaea	Archaeal Viruses
 Quadriviridae	Fungi	Eukaryotic Viruses
-Ralstonia	Bacteria	Bacteriophages
 Reoviridae	Animals	Eukaryotic Viruses
-Retroviridae	Animals	Eukaryotic Viruses
 Rhabdoviridae	Animals	Eukaryotic Viruses
-Rhizobium	Bacteria	Bacteriophages
 Rhizoctonia	Fungi&Plants	Eukaryotic Viruses
-Rhodobacter	Bacteria	Bacteriophages
-Rhodococcus	Bacteria	Bacteriophages
 Rice	Plants	Eukaryotic Viruses
 Riptortus	Animals	Eukaryotic Viruses
 Roniviridae	Animals	Eukaryotic Viruses
-Rudiviridae	Archaea	Archaeal Viruses
 Saccharomyces	Fungi	Eukaryotic Viruses
-Salicola	Bacteria	Bacteriophages
-Salisaeta	Bacteria	Bacteriophages
-Salmonella	Bacteria	Bacteriophages
 Salmovirus	Animals	Eukaryotic Viruses
-Salterprovirus	Archaea	Archaeal Viruses
 San	Animals	Eukaryotic Viruses
 Sanxia	Animals	Eukaryotic Viruses
 Satellites	Protozoa	Eukaryotic Viruses
@@ -329,7 +342,6 @@ Sclerophthora	Fungi	Eukaryotic Viruses
 Sclerotinia	Fungi&Plants	Eukaryotic Viruses
 Sclerotium	Fungi	Eukaryotic Viruses
 Sea	Animals	Eukaryotic Viruses
-Secoviridae	Plants	Eukaryotic Viruses
 Sewage-associated	Environment	Eukaryotic Viruses
 Shahe	Animals	Eukaryotic Viruses
 Shayang	Animals	Eukaryotic Viruses
@@ -337,43 +349,27 @@ Sheep	Animals	Eukaryotic Viruses
 Shuangao	Animals	Eukaryotic Viruses
 Sida	Plants	Eukaryotic Viruses
 Sinaivirus	Animals	Eukaryotic Viruses
-Sinorhizobium	Bacteria	Bacteriophages
-Siphoviridae	Bacteria	Bacteriophages
 Small	Plants	Eukaryotic Viruses
 Sobemovirus	Plants	Eukaryotic Viruses
-Sodalis	Bacteria	Bacteriophages
 Solanum	Plants	Eukaryotic Viruses
 Solenopsis	Animals	Eukaryotic Viruses
-Sphaerolipoviridae	Bacteria	Bacteriophages
 Spissistilus	Animals	Eukaryotic Viruses
-Staphylococcus	Bacteria	Bacteriophages
 Strawberry	Plants	Eukaryotic Viruses
-Streptococcus	Bacteria	Bacteriophages
 Subterranean	Plants	Eukaryotic Viruses
 Suffolk	Animals	Eukaryotic Viruses
-Sulfitobacter	Bacteria	Bacteriophages
-Sulfolobales	Archaea	Archaeal Viruses
-Sulfolobus	Archaea	Archaeal Viruses
 Sunflower	Plants	Eukaryotic Viruses
 Sunviridae	Animals	Eukaryotic Viruses
 Swagivirus	Animals	Eukaryotic Viruses
 Sweet	Plants	Eukaryotic Viruses
-Synechococcus	Bacteria	Bacteriophages
 Synedrella	Plants	Eukaryotic Viruses
 Tacheng	Animals	Eukaryotic Viruses
 Tanay	Animals	Eukaryotic Viruses
-Tectiviridae	Bacteria	Bacteriophages
 Temperate	Plants	Eukaryotic Viruses
-Tetraselmis	Bacteria	Bacteriophages
-Tetrasphaera	Bacteria	Bacteriophages
-Thermococcus	Archaea	Archaeal Viruses
-Thermus	Bacteria	Bacteriophages
 Thika	Animals	Eukaryotic Viruses
 Tobacco	Plants	Eukaryotic Viruses
 Togaviridae	Animals	Eukaryotic Viruses
 Tolecusatellitidae	Plants	Eukaryotic Viruses
 Tomato	Plants	Eukaryotic Viruses
-Tombusviridae	Plants	Eukaryotic Viruses
 Tongilchon	Animals	Eukaryotic Viruses
 Torulaspora	Fungi	Eukaryotic Viruses
 Tospoviridae	Animals	Eukaryotic Viruses
@@ -383,17 +379,13 @@ Trichomonas	Protozoa	Eukaryotic Viruses
 Trifolium-associated	Plants	Eukaryotic Viruses
 Turkey	Environment	Eukaryotic Viruses
 Turnip	Plants	Eukaryotic Viruses
-Turriviridae	Archaea	Archaeal Viruses
 Tymoviridae	Animals	Eukaryotic Viruses
 ubei	Animals	Eukaryotic Viruses
-uncultured	Bacteria	Bacteriophages
 unidentified	Human	Eukaryotic Viruses
 Ustilaginoidea	Fungi	Eukaryotic Viruses
 Velvet	Plants	Eukaryotic Viruses
 Verbesina	Plants	Eukaryotic Viruses
 Vernonia	Plants	Eukaryotic Viruses
-Vibrio	Bacteria	Bacteriophages
-Virgaviridae	Plants	Plant RNA Viruses
 Virtovirus	Plants	Eukaryotic Viruses
 virus	Flaviviridae	Eukaryotic Viruses
 Wabat	Animals	Eukaryotic Viruses
@@ -404,9 +396,20 @@ Wolkberg	Animals	Eukaryotic Viruses
 Wuchan	Animals	Eukaryotic Viruses
 Wuchang	Animals	Eukaryotic Viruses
 Wuhan	Animals	Eukaryotic Viruses
-Xanthomonas	Bacteria	Bacteriophages
 Xingshan	Animals	Eukaryotic Viruses
 Xinzhou	Animals	Eukaryotic Viruses
 Yellowstone	Environment	Eukaryotic Viruses
 Zhejiang	Animals	Eukaryotic Viruses
-crAssphage	Bacteria	Bacteriophages
+Chrysoviridae	Fungi	Fungal RNA Viruses
+Baculoviridae	Animals	Invertebrate DNA Viruses
+Ascoviridae	Invertebrate DNA Viruses	Invertebrate DNA Viruses
+Asfarviridae	Invertebrate DNA Viruses	Invertebrate DNA Viruses
+Metaviridae	Invertebrate DNA Viruses	Invertebrate RNA Viruses
+Virgaviridae	Plants	Plant RNA Viruses
+Betaflexiviridae	Plants	Plant RNA Viruses
+Closteroviridae	Plants	Plant RNA Viruses
+Secoviridae	Plants	Plant RNA Viruses
+Tombusviridae	Plants	Plant RNA Viruses
+Mimiviridae	Protozoa	Protozoa DNA Viruses
+Cystoviridae	Bacteria	RNA Bacteriophages
+Leviviridae	Bacteria	RNA Bacteriophages

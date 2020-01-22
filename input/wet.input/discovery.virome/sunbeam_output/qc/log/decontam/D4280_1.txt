@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+1313550	0	1313550	3833026

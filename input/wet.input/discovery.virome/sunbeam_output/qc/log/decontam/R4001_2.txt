@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+42441	1	42442	2705920

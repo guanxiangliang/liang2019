@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+28679	0	28679	3165121

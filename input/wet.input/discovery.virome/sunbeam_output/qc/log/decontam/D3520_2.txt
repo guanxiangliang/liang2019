@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+2187	0	2187	5350489

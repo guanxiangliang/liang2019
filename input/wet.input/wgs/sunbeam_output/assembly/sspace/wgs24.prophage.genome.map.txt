@@ -1,0 +1,70 @@
+start	end	protein_name	ymax	ymin
+67827	68990	Integrase	-1	-0.2
+69454	69672	Phage-like protein	-1	-0.2
+69889	70416	Phage-like protein	-1	-0.2
+70445	70993	Phage-like protein	-1	-0.2
+71065	71790	Phage-like protein	-1	-0.2
+75018	75740	Phage-like protein	-1	-0.2
+69674	69760	Hypothetical protein	-1	-0.2
+71828	72112	Hypothetical protein	-1	-0.2
+72202	72360	Hypothetical protein	-1	-0.2
+72389	72499	Hypothetical protein	-1	-0.2
+73218	74519	Hypothetical protein	-1	-0.2
+85250	85402	Hypothetical protein	-1	-0.2
+85452	85526	Hypothetical protein	-1	-0.2
+86262	86594	Hypothetical protein	-1	-0.2
+87042	87311	Hypothetical protein	-1	-0.2
+85135	85209	tRNA	1	0.2
+85215	85291	tRNA	1	0.2
+60466	60479	Attachment site	1	0.2
+106302	106315	Attachment site	1	0.2
+69005	69445	Hypothetical protein	1	0.2
+72531	72674	Hypothetical protein	1	0.2
+72700	72867	Hypothetical protein	1	0.2
+74681	74962	Hypothetical protein	1	0.2
+77171	77932	Hypothetical protein	1	0.2
+78231	78650	Hypothetical protein	1	0.2
+78704	78922	Hypothetical protein	1	0.2
+79013	79399	Hypothetical protein	1	0.2
+80887	81813	Hypothetical protein	1	0.2
+82254	82850	Hypothetical protein	1	0.2
+83661	83750	Hypothetical protein	1	0.2
+84534	84701	Hypothetical protein	1	0.2
+87486	87629	Hypothetical protein	1	0.2
+92819	93988	Hypothetical protein	1	0.2
+93990	94472	Hypothetical protein	1	0.2
+95511	95837	Hypothetical protein	1	0.2
+96005	96280	Hypothetical protein	1	0.2
+96283	96846	Hypothetical protein	1	0.2
+96861	97211	Hypothetical protein	1	0.2
+97316	97744	Hypothetical protein	1	0.2
+97748	99229	Hypothetical protein	1	0.2
+99340	99672	Hypothetical protein	1	0.2
+99761	99838	Hypothetical protein	1	0.2
+100489	100965	Hypothetical protein	1	0.2
+103132	103971	Hypothetical protein	1	0.2
+104353	105144	Hypothetical protein	1	0.2
+105736	106116	Hypothetical protein	1	0.2
+106179	106535	Hypothetical protein	1	0.2
+106543	107775	Hypothetical protein	1	0.2
+107804	108355	Hypothetical protein	1	0.2
+108357	109526	Fiber protein	1	0.2
+101170	103128	Tail protein	1	0.2
+75809	76036	Phage-like protein	1	0.2
+76076	76297	Phage-like protein	1	0.2
+76440	77159	Phage-like protein	1	0.2
+79435	79779	Phage-like protein	1	0.2
+79830	80777	Phage-like protein	1	0.2
+81890	82147	Phage-like protein	1	0.2
+82856	83026	Phage-like protein	1	0.2
+83088	83657	Phage-like protein	1	0.2
+83791	84480	Phage-like protein	1	0.2
+85560	85784	Phage-like protein	1	0.2
+85837	86256	Phage-like protein	1	0.2
+99852	100409	Phage-like protein	1	0.2
+103973	104278	Phage-like protein	1	0.2
+92018	92815	Head protein	1	0.2
+94583	95509	Head protein	1	0.2
+87751	88383	Terminase	1	0.2
+88385	90061	Terminase	1	0.2
+90062	92008	Portal protein	1	0.2

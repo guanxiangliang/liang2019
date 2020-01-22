@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+288488	1	288489	643931

@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+73	0	73	3152842

@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+33399	0	33399	2563578

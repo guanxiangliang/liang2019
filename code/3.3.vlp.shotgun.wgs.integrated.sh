@@ -52,7 +52,8 @@ samtools sort ${i}/nonsorted.bam -o ${i}/"D"${base}.${i}.bam
 rm ${i}/dna.sam
 rm ${i}/nonsorted.bam
 samtools index ${i}/"D"${base}.${i}.bam
-samtools idxstats ${i}/"D"${base}.${i}.bam > ${i}/"D"${base}.${i}.reads.txt
+python code/python.code/bam.count.py ${i}/"D"${base}.${i}.bam > ${i}/"D"${base}.${i}.reads.txt
+#samtools idxstats ${i}/"D"${base}.${i}.bam > ${i}/"D"${base}.${i}.reads.txt
 rm ${i}/*.bam*
 done
 done

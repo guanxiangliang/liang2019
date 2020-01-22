@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+83	0	83	2199375

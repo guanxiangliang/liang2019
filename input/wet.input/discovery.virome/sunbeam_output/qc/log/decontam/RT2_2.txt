@@ -1,0 +1,2 @@
+human38	phix174	host	nonhost
+40316	0	40316	56416
